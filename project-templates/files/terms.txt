@@ -1,0 +1,5 @@
+Hello there. I am going to be writing a lot of random nonsense for this terms txt file. Instead of getting one online
+for whatever reason I decided to write one out. 124124214124214124124124. Anyway.... this is going to test    multiple spaces
+stacked on top of each other. This file does not require splitting on punctuation or other non alphanumeric characters. That will be
+taught in depth later when we go over RegEx. RegEx are a really cool, powerful tool that has a lot of roots in the 
+theory of computation.
