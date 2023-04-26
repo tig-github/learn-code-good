@@ -7,6 +7,7 @@ import {
   Link,
   Spacer,
   Text,
+  Heading,
 } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
 
@@ -18,12 +19,41 @@ const Sidebar = () => {
         borderWidth=".05rem"
         borderTop="None"
         borderColor="grey"
-        w="25%"
+        w="35%"
         h="100%"
+        minH="calc(100vh)"
         p={4}
-        position="fixed"
+        overflowY="scroll"
+        zIndex={0}
       >
-        <Flex align="left" mx="1rem" direction="column"></Flex>
+        <Flex align="left" mx="1rem" direction="column">
+          <Button colorScheme="blackAlpha" variant="ghost" my="1.5rem">
+            <Heading size="md">
+              <Text align="center">Lesson 1</Text>
+            </Heading>
+          </Button>
+          <Button colorScheme="blackAlpha" variant="ghost">
+            Hello World! Setup
+          </Button>
+          <Button colorScheme="blackAlpha" variant="ghost">
+            Syntax
+          </Button>
+          <Button colorScheme="blackAlpha" variant="ghost">
+            Variables
+          </Button>
+          <Button colorScheme="blackAlpha" variant="ghost">
+            Types
+          </Button>
+          <Button colorScheme="blackAlpha" variant="ghost">
+            Operators
+          </Button>
+          <Button colorScheme="blackAlpha" variant="ghost">
+            Errors
+          </Button>
+          <Button colorScheme="blackAlpha" variant="ghost">
+            Input/Output
+          </Button>
+        </Flex>
       </Box>
     </>
   );

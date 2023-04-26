@@ -2,25 +2,24 @@ import React from "react";
 import {
   Stack,
   Container,
-  Grid,
-  GridItem,
+  Box,
+  SimpleGrid,
   Text,
   Heading,
 } from "@chakra-ui/react";
-import Course from "../../../components/Course";
 import Sidebar from "../../../components/Sidebar";
 
 const LessonOne = () => {
   return (
     <>
-      <Grid>
-        <Stack gap={12} my="6rem" align="center">
+      <SimpleGrid columns={2}>
+        <Sidebar />
+        <Stack my="6rem">
           <Heading mb="3rem">
-            <Text align="center">Lesson One</Text>
+            <Text>Lesson One</Text>
           </Heading>
         </Stack>
-        <Sidebar />
-      </Grid>
+      </SimpleGrid>
     </>
   );
 };
