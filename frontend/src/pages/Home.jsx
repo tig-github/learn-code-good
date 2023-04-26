@@ -18,7 +18,7 @@ const Home = () => {
   return (
     <>
       <Stack gap={12} my="6rem" align="center">
-        <Heading>
+        <Heading mb="3rem">
           <Text align="center">print('Hello World')</Text>
         </Heading>
         <Container maxW="75%">

@@ -20,6 +20,8 @@ const Navbar = () => {
         borderColor="grey"
         w="100%"
         p={4}
+        position="sticky"
+        top={0}
       >
         <Flex align="left" mx="1rem">
           <ButtonGroup gap={3}>

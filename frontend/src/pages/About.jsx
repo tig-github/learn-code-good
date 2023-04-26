@@ -1,7 +1,16 @@
 import React from "react";
+import { Stack, Container, Text, Heading } from "@chakra-ui/react";
 
 const About = () => {
-  return <></>;
+  return (
+    <>
+      <Stack gap={12} my="6rem" align="center">
+        <Heading>
+          <Text align="center">print('About')</Text>
+        </Heading>
+      </Stack>
+    </>
+  );
 };
 
 export default About;
