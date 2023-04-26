@@ -3,7 +3,8 @@ import {
   Stack,
   Container,
   Box,
-  SimpleGrid,
+  Grid,
+  GridItem,
   Text,
   Heading,
 } from "@chakra-ui/react";
@@ -12,14 +13,12 @@ import Sidebar from "../../../components/Sidebar";
 const LessonOne = () => {
   return (
     <>
-      <SimpleGrid columns={2}>
-        <Sidebar />
-        <Stack my="6rem">
-          <Heading mb="3rem">
-            <Text>Lesson One</Text>
-          </Heading>
-        </Stack>
-      </SimpleGrid>
+      <Stack my="6rem" align="center">
+        <Heading mb="3rem">
+          <Text>Lesson One</Text>
+        </Heading>
+        <Text>It all starts here!</Text>
+      </Stack>
     </>
   );
 };

@@ -6,6 +6,7 @@ import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import Courses from "./pages/Courses";
 import About from "./pages/About";
+import LessonLayout from "./pages/LessonLayout";
 import LessonOne from "./pages/Course1/Lesson1/LessonOne";
 
 function App() {
@@ -15,10 +16,12 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="/courses" element={<Courses />}></Route>
-            <Route path="/courses/lesson1" element={<LessonOne />}></Route>
+            <Route path="/courses" element={<Courses />} />
 
             <Route path="/about" element={<About />} />
+          </Route>
+          <Route path="/lesson" element={<LessonLayout />}>
+            <Route path="/lesson/lesson1" element={<LessonOne />}></Route>
           </Route>
         </Routes>
       </BrowserRouter>

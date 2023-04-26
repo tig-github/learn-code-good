@@ -9,7 +9,7 @@ const Courses = () => {
         <Heading mb="3rem">
           <Text align="center">print('Courses')</Text>
         </Heading>
-        <Course route="/courses/lesson1" />
+        <Course route="/lesson/lesson1" />
       </Stack>
     </>
   );

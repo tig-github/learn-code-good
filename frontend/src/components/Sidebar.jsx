@@ -19,12 +19,12 @@ const Sidebar = () => {
         borderWidth=".05rem"
         borderTop="None"
         borderColor="grey"
-        w="35%"
         h="100%"
         minH="calc(100vh)"
         p={4}
         overflowY="scroll"
         zIndex={0}
+        position="fixed"
       >
         <Flex align="left" mx="1rem" direction="column">
           <Button colorScheme="blackAlpha" variant="ghost" my="1.5rem">
