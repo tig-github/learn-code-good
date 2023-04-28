@@ -1,36 +1,36 @@
 import React from "react";
 import { Box, Flex, Text, Heading } from "@chakra-ui/react";
-import { CheckIcon } from "@chakra-ui/icons";
+import { WarningTwoIcon } from "@chakra-ui/icons";
 
-const Goal = ({ text }) => {
+const Skip = ({ text }) => {
   return (
     <>
       <Box
         bg="white"
         borderWidth=".05rem"
         borderColor="grey"
-        w="60%"
+        w="80%"
         h="40%"
         overflow="hidden"
       >
         <Flex align="center">
           <Heading size="md"></Heading>
           <Box
-            bg="#00D100"
+            bg="red"
             borderWidth=".05rem"
             borderTop="None"
             borderLeft="None"
             borderBottom="None"
             borderColor="black"
             h="100%"
-            w="8rem"
+            w="30%"
             minHeight="4rem"
             mr="3rem"
           >
             <Flex gap={5} mt="1rem" align="center">
-              <CheckIcon color="white" boxSize={8} ml=".8rem" />
+              <WarningTwoIcon color="white" boxSize={8} ml=".8rem" />
               <Text color="white" align="center" mr="2rem">
-                Goal
+                Only Skip if...
               </Text>
             </Flex>
           </Box>
@@ -42,4 +42,4 @@ const Goal = ({ text }) => {
   );
 };
 
-export default Goal;
+export default Skip;
