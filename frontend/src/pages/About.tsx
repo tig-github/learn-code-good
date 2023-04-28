@@ -8,6 +8,7 @@ const About = () => {
         <Heading>
           <Text align="center">print('About')</Text>
         </Heading>
+        <Text align="center">I'm all about learning. Dive in!</Text>
       </Stack>
     </>
   );

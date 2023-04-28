@@ -2,6 +2,7 @@ import React from "react";
 import { Stack, Box, Text, Heading } from "@chakra-ui/react";
 import Goal from "../../../components/Goal.tsx";
 import Skip from "../../../components/Skip.tsx";
+import TextLine from "../../../components/TextLine.tsx";
 
 const goalOneText: string =
   "To get an introduction into the Python Programming language.";
@@ -17,6 +18,7 @@ it, you will be much more resiliant to common pitfalls that can slow the early l
 the ground running.`;
 const skipText: string =
   "You have had minor programming experience in Python before and have an environment set up.";
+const textField: Array<string> = [fieldOneText, fieldTwoText];
 
 const LessonOne = () => {
   return (
@@ -29,23 +31,7 @@ const LessonOne = () => {
 
         {/* This box is essentially a dividing line */}
 
-        <Box
-          borderWidth=".05rem"
-          borderTop="None"
-          borderRight="None"
-          borderBottom="None"
-          borderColor="black"
-          h="100%"
-          w="80%"
-          pl={4}
-          minHeight="4rem"
-        >
-          <Text fontSize="4xl">It all starts here!</Text>
-          <br />
-          <Text fontSize="xl">{fieldOneText}</Text>
-          <br />
-          <Text fontSize="xl">{fieldTwoText}</Text>
-        </Box>
+        <TextLine textArray={textField} />
         <Skip text={skipText} />
       </Stack>
     </>
