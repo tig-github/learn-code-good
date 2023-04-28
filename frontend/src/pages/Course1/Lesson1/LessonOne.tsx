@@ -1,14 +1,9 @@
 import React from "react";
-import {
-  Stack,
-  Container,
-  Box,
-  Grid,
-  GridItem,
-  Text,
-  Heading,
-} from "@chakra-ui/react";
-import Sidebar from "../../../components/Sidebar";
+import { Stack, Text, Heading } from "@chakra-ui/react";
+import Goal from "../../../components/Goal.tsx";
+
+const goalOneText: string =
+  "To learn the basics of the Python Programming language.";
 
 const LessonOne = () => {
   return (
@@ -17,6 +12,7 @@ const LessonOne = () => {
         <Heading mb="3rem">
           <Text>Lesson One</Text>
         </Heading>
+        <Goal text={goalOneText} />
         <Text>It all starts here!</Text>
       </Stack>
     </>

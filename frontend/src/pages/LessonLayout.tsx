@@ -1,16 +1,8 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import { Outlet } from "react-router-dom";
-import {
-  Stack,
-  Container,
-  Box,
-  Grid,
-  GridItem,
-  Text,
-  Heading,
-} from "@chakra-ui/react";
-import Sidebar from "../components/Sidebar";
+import { Grid, GridItem } from "@chakra-ui/react";
+import Sidebar from "../components/Sidebar.tsx";
+import Navbar from "../components/Navbar.tsx";
 
 const LessonLayout = () => {
   return (
