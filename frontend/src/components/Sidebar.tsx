@@ -26,15 +26,20 @@ const Sidebar = () => {
         zIndex={0}
         position="fixed"
       >
-        <Flex align="left" mx="1rem" direction="column">
-          <Button colorScheme="blackAlpha" variant="ghost" my="1.5rem">
-            <Heading size="md">
-              <Text align="center">Lesson 1</Text>
-            </Heading>
-          </Button>
-          <Button colorScheme="blackAlpha" variant="ghost">
-            Hello World! Setup
-          </Button>
+        <Flex align="center" mx="1rem" direction="column">
+          <Link as={RouterLink} to="/lesson/lesson1">
+            <Button colorScheme="blackAlpha" variant="ghost" my="1.5rem">
+              <Heading size="md">
+                <Text align="center">Lesson 1</Text>
+              </Heading>
+            </Button>
+          </Link>
+          <Link as={RouterLink} to="/lesson/lesson1/helloworld">
+            <Button colorScheme="blackAlpha" variant="ghost">
+              Hello World! Setup
+            </Button>
+          </Link>
+
           <Button colorScheme="blackAlpha" variant="ghost">
             Syntax
           </Button>

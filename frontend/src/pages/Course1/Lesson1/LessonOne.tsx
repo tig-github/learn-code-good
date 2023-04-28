@@ -4,7 +4,7 @@ import Goal from "../../../components/Goal.tsx";
 import Skip from "../../../components/Skip.tsx";
 
 const goalOneText: string =
-  "To get an introduction intos the Python Programming language.";
+  "To get an introduction into the Python Programming language.";
 const fieldOneText: string = `The first time I tried to teach programming 
 I attempted to speed through this part of the process to get to the fundementals that are presented here.
 This was a big mistake - there are many small details here that, while not important to memorize, should be

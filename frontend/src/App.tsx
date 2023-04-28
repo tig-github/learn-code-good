@@ -8,6 +8,7 @@ import Courses from "./pages/Courses.tsx";
 import About from "./pages/About.tsx";
 import LessonLayout from "./pages/LessonLayout.tsx";
 import LessonOne from "./pages/Course1/Lesson1/LessonOne.tsx";
+import L1Setup from "./pages/Course1/Lesson1/L1Setup.tsx";
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
             <Route path="/about" element={<About />} />
           </Route>
           <Route path="/lesson" element={<LessonLayout />}>
-            <Route path="/lesson/lesson1" element={<LessonOne />}></Route>
+            <Route path="/lesson/lesson1" element={<LessonOne />} />
+            <Route path="/lesson/lesson1/helloworld" element={<L1Setup />} />
           </Route>
         </Routes>
       </BrowserRouter>
