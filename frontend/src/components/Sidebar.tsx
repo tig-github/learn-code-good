@@ -39,13 +39,16 @@ const Sidebar = () => {
               Hello World! Setup
             </Button>
           </Link>
-
-          <Button colorScheme="blackAlpha" variant="ghost">
-            Syntax
-          </Button>
-          <Button colorScheme="blackAlpha" variant="ghost">
-            Variables
-          </Button>
+          <Link as={RouterLink} to="/lesson/lesson1/syntax">
+            <Button colorScheme="blackAlpha" variant="ghost">
+              Syntax
+            </Button>
+          </Link>
+          <Link as={RouterLink} to="/lesson/lesson1/variables">
+            <Button colorScheme="blackAlpha" variant="ghost">
+              Variables
+            </Button>
+          </Link>
           <Button colorScheme="blackAlpha" variant="ghost">
             Types
           </Button>

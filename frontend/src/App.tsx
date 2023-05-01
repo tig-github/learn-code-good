@@ -10,6 +10,7 @@ import LessonLayout from "./pages/LessonLayout.tsx";
 import LessonOne from "./pages/Course1/Lesson1/LessonOne.tsx";
 import L1Setup from "./pages/Course1/Lesson1/L1Setup.tsx";
 import L1Syntax from "./pages/Course1/Lesson1/L1Syntax.tsx";
+import L1Variables from "./pages/Course1/Lesson1/L1Variables.tsx";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="/lesson/lesson1" element={<LessonOne />} />
             <Route path="/lesson/lesson1/helloworld" element={<L1Setup />} />
             <Route path="/lesson/lesson1/syntax" element={<L1Syntax />} />
+            <Route path="/lesson/lesson1/variables" element={<L1Variables />} />
           </Route>
         </Routes>
       </BrowserRouter>

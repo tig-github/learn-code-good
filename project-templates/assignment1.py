@@ -60,6 +60,7 @@ except (SyntaxError, TypeError):
 # Create a program that takes a user inputted number, then outputs the remainder of that number divided by 2.
 
 
+
 # Question 7
 # Create a program that outputs the first and last character of the given string
 
