@@ -5,12 +5,13 @@ import {
   Container,
   Text,
   Heading,
+  Image,
   Button,
   Link,
 } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
 
-const Course = ({ route, heading, lessons, text }) => {
+const Course = ({ route, heading, lessons, text, img }) => {
   return (
     <>
       <Box
@@ -27,6 +28,7 @@ const Course = ({ route, heading, lessons, text }) => {
             <Text align="center">{heading}</Text>
           </Heading>
           <Text align="center">Lessons: {lessons}</Text>
+          <Image boxSize="50%" src={img} />
           <Container maxW="80%">
             <Text align="left">{text}</Text>
           </Container>

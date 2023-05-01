@@ -1,6 +1,7 @@
 import React from "react";
 import { Stack, Container, Text, Heading } from "@chakra-ui/react";
 import Course from "../components/Course.tsx";
+import programmerImg from "../images/royaltyfreeprogrammer.jpg";
 
 const courseOneText: string = `
 This course takes you through the basics of programming. The
@@ -24,6 +25,7 @@ const Courses = () => {
           heading={"Learn Programming"}
           lessons={"11"}
           text={courseOneText}
+          img={programmerImg}
         />
       </Stack>
     </>
