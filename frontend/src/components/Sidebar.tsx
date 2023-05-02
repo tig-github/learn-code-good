@@ -19,8 +19,7 @@ const Sidebar = () => {
         borderWidth=".05rem"
         borderTop="None"
         borderColor="grey"
-        h="100%"
-        minH="calc(100vh)"
+        h="90%"
         p={4}
         overflowY="scroll"
         zIndex={0}
@@ -49,9 +48,11 @@ const Sidebar = () => {
               Variables
             </Button>
           </Link>
-          <Button colorScheme="blackAlpha" variant="ghost">
-            Types
-          </Button>
+          <Link as={RouterLink} to="/lesson/lesson1/types">
+            <Button colorScheme="blackAlpha" variant="ghost">
+              Types
+            </Button>
+          </Link>
           <Button colorScheme="blackAlpha" variant="ghost">
             Operators
           </Button>
@@ -60,6 +61,27 @@ const Sidebar = () => {
           </Button>
           <Button colorScheme="blackAlpha" variant="ghost">
             Input/Output
+          </Button>
+
+          <Button colorScheme="blackAlpha" variant="ghost" my="1.5rem">
+            <Heading size="md">
+              <Text align="center">Lesson 2</Text>
+            </Heading>
+          </Button>
+          <Button colorScheme="blackAlpha" variant="ghost">
+            Control Flow
+          </Button>
+          <Button colorScheme="blackAlpha" variant="ghost">
+            Branching
+          </Button>
+          <Button colorScheme="blackAlpha" variant="ghost">
+            While Loops
+          </Button>
+          <Button colorScheme="blackAlpha" variant="ghost">
+            For Loops
+          </Button>
+          <Button colorScheme="blackAlpha" variant="ghost">
+            Files and Error Handling
           </Button>
         </Flex>
       </Box>
