@@ -1,16 +1,16 @@
 import React from "react";
 import { Stack, Image, Text, Heading } from "@chakra-ui/react";
-import Goal from "../../components/Goal.js";
-import Skip from "../../components/Skip.js";
-import Python from "../../components/Python.js";
-import TextLine from "../../components/TextLine.js";
+import Goal from "../../components/Goal.tsx";
+import Skip from "../../components/Skip.tsx";
+import Python from "../../components/Python.tsx";
+import TextLine from "../../components/TextLine.tsx";
 
 const goalOneText: string = "Goal string";
 const skipText: string = "Skip string";
 const fieldOneText: string = ``;
 const textField1: Array<string> = [fieldOneText];
 
-const L1Template = () => {
+const LessonTemplate = () => {
   return (
     <>
       <Stack gap={8} my="6rem" ml="2rem">
@@ -24,4 +24,4 @@ const L1Template = () => {
   );
 };
 
-export default L1Template;
+export default LessonTemplate;
