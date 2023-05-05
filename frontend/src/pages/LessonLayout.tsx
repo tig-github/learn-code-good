@@ -8,11 +8,11 @@ const LessonLayout = () => {
   return (
     <>
       <Navbar />
-      <Grid templateColumns="repeat(4, 1fr)">
+      <Grid templateColumns="20% 80%" autoFlow="row">
         <GridItem colSpan={1}>
           <Sidebar />
         </GridItem>
-        <GridItem colSpan={3}>
+        <GridItem colSpan={1} overflowY="scroll">
           <Outlet />
         </GridItem>
       </Grid>

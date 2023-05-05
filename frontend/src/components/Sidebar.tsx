@@ -19,7 +19,7 @@ const Sidebar = () => {
         borderWidth=".05rem"
         borderTop="None"
         borderColor="grey"
-        h="90%"
+        h="100%"
         p={4}
         overflowY="scroll"
         zIndex={0}
