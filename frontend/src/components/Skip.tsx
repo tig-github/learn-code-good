@@ -9,7 +9,7 @@ const Skip = ({ text }) => {
         bg="white"
         borderWidth=".05rem"
         borderColor="grey"
-        w="80%"
+        w="60%"
         h="40%"
         overflow="hidden"
       >
@@ -23,7 +23,7 @@ const Skip = ({ text }) => {
             borderBottom="None"
             borderColor="black"
             h="100%"
-            w="30%"
+            w="28%"
             minHeight="4rem"
             mr="3rem"
           >

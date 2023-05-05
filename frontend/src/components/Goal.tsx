@@ -23,7 +23,7 @@ const Goal = ({ text }) => {
             borderBottom="None"
             borderColor="black"
             h="100%"
-            w="8rem"
+            w="20%"
             minHeight="4rem"
             mr="3rem"
           >
