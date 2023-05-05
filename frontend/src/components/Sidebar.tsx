@@ -53,9 +53,12 @@ const Sidebar = () => {
               Types
             </Button>
           </Link>
-          <Button colorScheme="blackAlpha" variant="ghost">
-            Operators
-          </Button>
+          <Link as={RouterLink} to="/lesson/lesson1/operators">
+            <Button colorScheme="blackAlpha" variant="ghost">
+              Operators
+            </Button>
+          </Link>
+
           <Button colorScheme="blackAlpha" variant="ghost">
             Errors
           </Button>
