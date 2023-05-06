@@ -23,8 +23,9 @@ const Skip = ({ text }) => {
             borderBottom="None"
             borderColor="black"
             h="100%"
-            w="28%"
+            w="40%"
             minHeight="4rem"
+            minWidth="6rem"
             mr="3rem"
           >
             <Flex gap={5} mt="1rem" align="center">
@@ -35,7 +36,9 @@ const Skip = ({ text }) => {
             </Flex>
           </Box>
 
-          <Text align="center">{text}</Text>
+          <Text align="center" mr="2rem">
+            {text}
+          </Text>
         </Flex>
       </Box>
     </>
