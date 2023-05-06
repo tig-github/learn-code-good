@@ -44,6 +44,16 @@ a newline. We will go more into this in the final part of Lesson 1.`;
 const fieldNineText: string = `Booleans are simple - they represent True and False. They will be pretty uninteresting until Lesson 2.`;
 const fieldTenText: string = `None is a special type which represents nothing. This is also pretty uninteresting until later, but know that
 None is handled differently from other types and cannot be operated on with other types.`;
+const fieldElevenText: string = `We now get to learn our second builtin function after print(). type() is used to
+tell you what type the value you pass into it is. Here we get into a distinction with functions - some will do work on
+their own as part of calling them, like print - this work is called side effects.`;
+const fieldTwelveText: string = `Others, like type(), will just return a value to you for your own use. This will be
+elaborated on in great detail in Lesson 4, but for now try running the code below and see what happens.`;
+const fieldThirteenText: string = `As you see, it only printed twice. That is because type() returns a string, which is then
+printed out. Again, these semantics will be discussed in greater detail, but basically, you pass a value into a function and get something
+out of it. If you are curious and can't wait until lesson 4, try treating print() like type(), and see what you get.`;
+const fieldFourteenText: string = `For now though, all you need to get out of this is that type() can be used to see
+the exact type of a value.`;
 
 const textField1: Array<string> = [fieldOneText, fieldTwoText, fieldThreeText];
 const textField2: Array<string> = [fieldFourText];
@@ -51,6 +61,8 @@ const textField3: Array<string> = [fieldFiveText];
 const textField4: Array<string> = [fieldSixText, fieldSevenText];
 const textField5: Array<string> = [fieldEightText];
 const textField6: Array<string> = [fieldNineText, fieldTenText];
+const textField7: Array<string> = [fieldElevenText, fieldTwelveText];
+const textField8: Array<string> = [fieldThirteenText, fieldFourteenText];
 
 const L1Types = () => {
   return (
@@ -112,6 +124,12 @@ const L1Types = () => {
           <Text fontSize="xl">Booleans and None</Text>
         </Heading>
         <TextLine textArray={textField6} />
+        <Heading mb="6rem" ml="25rem">
+          <Text fontSize="xl">type()</Text>
+        </Heading>
+        <TextLine textArray={textField7} />
+        <Python trinketsrc="https://trinket.io/embed/python3/78e3061cf0" />
+        <TextLine textArray={textField8} />
       </Stack>
     </>
   );

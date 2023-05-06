@@ -29,10 +29,13 @@ x^y, or x to the power of y. `;
 const fieldThreeText: string = `Second, Python supports two operators for division with remainder. Modulo will give remainder,
 where x % y will give the remainder of x divided by y.`;
 const fieldFourText: string = `Integer division will round down the result of normal division, so
-5 // 2 would give 2. This is useful when you need to work with integer types, as opposed to float types.`;
-const fieldFiveText: string = ``;
+5 // 2 would give 2. This is useful when you need to work with integer types, as opposed to float types. Another note on
+Modulo, it can be used to check if a number is divisible by another, though I'll let you reason out how.`;
+const fieldFiveText: string = `In the trinket interperter above or your own local environment, try writing a program that
+uses all of the math operators above. `;
 const textField1: Array<string> = [fieldOneText];
 const textField2: Array<string> = [fieldTwoText, fieldThreeText, fieldFourText];
+const textField3: Array<string> = [fieldFiveText];
 
 const L1Operators = () => {
   return (
@@ -89,6 +92,14 @@ const L1Operators = () => {
           </Table>
         </TableContainer>
         <TextLine textArray={textField2} />
+        <Python trinketsrc="https://trinket.io/embed/python3/bab2a94f6c" />
+        <TextLine textArray={textField3} />
+        <Heading mb="6rem" ml="25rem">
+          <Text fontSize="2xl">Assignment</Text>
+        </Heading>
+        <Heading mb="6rem" ml="25rem">
+          <Text fontSize="2xl">Indexing</Text>
+        </Heading>
       </Stack>
     </>
   );
