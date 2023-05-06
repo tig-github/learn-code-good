@@ -28,7 +28,6 @@ changes in z will not effect y.`;
 const fieldSixText: string = `There are two major naming conventions for variables, and which to use typically depends on the 
 programming language. The first is snake_case, which is generally used in Python and is done by separating words with _. The second is 
 camelCase, which is more common in C-style languages and separates words with capital letters. Try to stick to snake_case in Python.`;
-const fieldSevenText: string = `We have already discussed how assignment works in the Variable section.`;
 
 const textField1: Array<string> = [fieldOneText];
 const textField2: Array<string> = [fieldTwoText, fieldThreeText];
