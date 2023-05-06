@@ -65,6 +65,11 @@ const Sidebar = () => {
           <Button colorScheme="blackAlpha" variant="ghost">
             Input/Output
           </Button>
+          <Link as={RouterLink} to="/lesson/lesson1/extras">
+            <Button colorScheme="blackAlpha" variant="ghost">
+              Extras
+            </Button>
+          </Link>
 
           <Button colorScheme="blackAlpha" variant="ghost" my="1.5rem">
             <Heading size="md">

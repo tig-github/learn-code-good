@@ -13,6 +13,7 @@ import L1Syntax from "./pages/Course1/Lesson1/L1Syntax.tsx";
 import L1Variables from "./pages/Course1/Lesson1/L1Variables.tsx";
 import L1Types from "./pages/Course1/Lesson1/L1Types.tsx";
 import L1Operators from "./pages/Course1/Lesson1/L1Operators.tsx";
+import L1Extras from "./pages/Course1/Lesson1/L1Extras.tsx";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route path="/lesson/lesson1/variables" element={<L1Variables />} />
             <Route path="/lesson/lesson1/types" element={<L1Types />} />
             <Route path="/lesson/lesson1/operators" element={<L1Operators />} />
+            <Route path="/lesson/lesson1/extras" element={<L1Extras />} />
           </Route>
         </Routes>
       </BrowserRouter>
