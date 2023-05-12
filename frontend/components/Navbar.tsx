@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Box, Flex, Button, ButtonGroup, Spacer, Text } from "@chakra-ui/react";
+import { CgProfile } from "react-icons/cg";
 
 const Navbar = () => {
   return (
@@ -39,6 +40,9 @@ const Navbar = () => {
           <Text fontSize="2rem" color="grey">
             Learn-Code-Good
           </Text>
+          <Link href="/profile">
+            <CgProfile />
+          </Link>
         </Flex>
       </Box>
     </>
