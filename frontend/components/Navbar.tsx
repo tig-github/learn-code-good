@@ -1,9 +1,30 @@
-import React from "react";
+import React, { useRef } from "react";
 import Link from "next/link";
-import { Box, Flex, Button, ButtonGroup, Spacer, Text } from "@chakra-ui/react";
+import { useHover } from "usehooks-ts";
+import {
+  Box,
+  Flex,
+  Button,
+  ButtonGroup,
+  Spacer,
+  Text,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuDivider,
+  useDisclosure,
+} from "@chakra-ui/react";
 import { CgProfile } from "react-icons/cg";
 
 const Navbar = () => {
+  const hoverRef = useRef(null);
+  const isHover = useHover(hoverRef);
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <>
       <Box
@@ -18,7 +39,7 @@ const Navbar = () => {
         top={0}
         zIndex={1}
       >
-        <Flex align="left" mx="1rem">
+        <Flex align="left" mx="1rem" h="100%" minH="3.5rem" mt=".5rem">
           <ButtonGroup gap={3}>
             <Link href="/">
               <Button colorScheme="blackAlpha" variant="outline" size="lg">
@@ -40,12 +61,27 @@ const Navbar = () => {
           <Text fontSize="2rem" color="grey">
             Learn-Code-Good
           </Text>
-          <Link
-            href="/profile"
-            style={{ width: "3.5%", height: "2%", marginLeft: "1.5rem" }}
-          >
-            <CgProfile size="100%" color="grey" />
-          </Link>
+          <Menu isOpen={isHover}>
+            <MenuGroup ref={hoverRef}>
+              <Link
+                href="/profile"
+                style={{
+                  width: "50%",
+                  height: "100%",
+                  marginLeft: "1.5rem",
+                }}
+              >
+                <MenuButton as={Button} variant="unstyled" mt=".3rem">
+                  <CgProfile size="100%" color="grey" />
+                </MenuButton>
+              </Link>
+              <MenuList>
+                <MenuItem>Profile</MenuItem>
+                <MenuItem>Logout</MenuItem>
+                {/* <MenuItem>Login</MenuItem> */}
+              </MenuList>
+            </MenuGroup>
+          </Menu>
         </Flex>
       </Box>
     </>
