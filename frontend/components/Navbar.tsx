@@ -40,8 +40,11 @@ const Navbar = () => {
           <Text fontSize="2rem" color="grey">
             Learn-Code-Good
           </Text>
-          <Link href="/profile">
-            <CgProfile />
+          <Link
+            href="/profile"
+            style={{ width: "3.5%", height: "2%", marginLeft: "1.5rem" }}
+          >
+            <CgProfile size="100%" color="grey" />
           </Link>
         </Flex>
       </Box>
