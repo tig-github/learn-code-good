@@ -76,8 +76,17 @@ const Navbar = () => {
                 </MenuButton>
               </Link>
               <MenuList>
-                <MenuItem>Profile</MenuItem>
-                <MenuItem>Logout</MenuItem>
+                <Link href="/profile">
+                  <MenuItem>
+                    <Button variant="unstyled">Profile</Button>
+                  </MenuItem>
+                </Link>
+
+                <MenuItem>
+                  <Button variant="unstyled" color="#F3785D">
+                    Logout
+                  </Button>
+                </MenuItem>
                 {/* <MenuItem>Login</MenuItem> */}
               </MenuList>
             </MenuGroup>
