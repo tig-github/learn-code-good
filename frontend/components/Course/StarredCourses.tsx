@@ -10,7 +10,7 @@ const StarredCourses = ({
 }) => {
   return (
     <>
-      <Stack align="center" gap={12}>
+      <Stack align="center" gap={6}>
         <Heading as="h3" size="lg">
           <Text>Starred Coureses</Text>
         </Heading>
