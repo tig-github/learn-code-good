@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack, Image, Text, Heading } from "@chakra-ui/react";
+import { Stack, Image, Text, Heading, Box } from "@chakra-ui/react";
 import Goal from "../../../components/Goal";
 import Skip from "../../../components/Skip";
 import Python from "../../../components/Python";
@@ -39,11 +39,13 @@ const L1Variables = () => {
   return (
     <>
       <Stack gap={8} my="6rem" ml="2rem">
-        <Heading mb="6rem" ml="25rem">
-          <Text>Variables</Text>
+        <Heading>
+          <Text align="center">Variables</Text>
         </Heading>
-        <Goal text={goalOneText} />
-        <Skip text={skipText} />
+        <Box>
+          <Goal text={goalOneText} />
+          <Skip text={skipText} />
+        </Box>
         <TextLine textArray={textField1} />
         <Python trinketsrc="https://trinket.io/embed/python/7602a71497" />
         <TextLine textArray={textField2} />

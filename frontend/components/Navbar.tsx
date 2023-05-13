@@ -1,7 +1,9 @@
 import React, { useRef } from "react";
 import Link from "next/link";
 import { useHover } from "usehooks-ts";
+import LessonIcon from "./LessonIcon";
 import {
+  Image,
   Box,
   Flex,
   Button,
@@ -12,19 +14,16 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
-  MenuItemOption,
   MenuGroup,
-  MenuOptionGroup,
-  MenuDivider,
-  useDisclosure,
 } from "@chakra-ui/react";
 import { CgProfile } from "react-icons/cg";
+import { useRouter } from "next/router";
+import { HamburgerIcon } from "@chakra-ui/icons";
 
 const Navbar = () => {
   const hoverRef = useRef(null);
   const isHover = useHover(hoverRef);
-  const { isOpen, onOpen, onClose } = useDisclosure();
-
+  const router = useRouter();
   return (
     <>
       <Box
@@ -40,6 +39,15 @@ const Navbar = () => {
         zIndex={1}
       >
         <Flex align="left" mx="1rem" h="100%" minH="3.5rem" mt=".5rem">
+          <Link href="/">
+            <Image
+              src={"/images/main_logo.png"}
+              w="40px"
+              h="40px"
+              mr="2rem"
+              mt="0.2rem"
+            />
+          </Link>
           <ButtonGroup gap={3}>
             <Link href="/">
               <Button colorScheme="blackAlpha" variant="outline" size="lg">
@@ -92,6 +100,7 @@ const Navbar = () => {
               </MenuList>
             </MenuGroup>
           </Menu>
+          {router.pathname.includes("lesson") && <LessonIcon />}
         </Flex>
       </Box>
     </>

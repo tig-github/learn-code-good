@@ -20,6 +20,7 @@ const StarredCourses = ({
           borderLeft="None"
           borderColor="black"
           w="calc(100vw)"
+          pt="1rem"
         >
           <Flex overflowX="scroll" w="100%">
             {courseList.map(

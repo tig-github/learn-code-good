@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
-import Image from "next/image";
-import { Box, Stack, Text, Heading } from "@chakra-ui/react";
+import React from "react";
+import { Box, Grid, Image, Stack, Text, Heading } from "@chakra-ui/react";
 
 const CourseView = ({
   heading,
@@ -13,24 +12,31 @@ const CourseView = ({
 }) => {
   return (
     <>
+      {/*should move mx (margin-x) to starredcourses later*/}
       <Box
-        bg="white"
-        borderWidth=".05rem"
-        borderColor="grey"
-        w="25%"
-        h="100%"
-        minH="25rem"
-        minW="22rem"
-        mx="2rem"
-        p={4}
+        transition={"all 0.5s"}
+        _hover={{
+          transform: "rotate(0) skew(0) skewY(0) scaleX(1.05) scaleY(1.05)",
+          transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
+        }}
+        bgColor="rgb(42, 46, 53)"
+        maxW="24rem"
+        borderRadius="0.75rem"
       >
-        {/*should move mx (margin-x) to starredcourses later*/}
-        <Stack gap={6} align="center">
-          <Heading size="lg">
-            <Text align="center">{heading}</Text>
+        <Box bgColor="#323232" p="1.25rem" pb="0" borderTopRadius="0.75rem">
+          <Image src={img} />
+        </Box>
+        <Stack align="center" p="1.25rem" pt={0} mb="1.5rem">
+          <Heading mt="2rem" size="lg">
+            <Text
+              align="center"
+              fontWeight="400"
+              fontSize="1.25rem"
+              color="white"
+            >
+              {heading} (lessons: {lessons})
+            </Text>
           </Heading>
-          <Text align="center">Lessons: {lessons}</Text>
-          <Image src={img} width={250} height={250} alt="Coder" />
         </Stack>
       </Box>
     </>

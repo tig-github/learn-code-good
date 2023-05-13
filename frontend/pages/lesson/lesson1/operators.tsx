@@ -13,6 +13,7 @@ import {
   Tr,
   Th,
   Td,
+  Box,
 } from "@chakra-ui/react";
 import Goal from "../../../components/Goal";
 import Skip from "../../../components/Skip";
@@ -87,11 +88,13 @@ const L1Operators = () => {
   return (
     <>
       <Stack gap={8} my="6rem" ml="2rem">
-        <Heading mb="6rem" ml="25rem">
-          <Text>Operators</Text>
+        <Heading>
+          <Text align="center">Operators</Text>
         </Heading>
-        <Goal text={goalOneText} />
-        <Skip text={skipText} />
+        <Box>
+          <Goal text={goalOneText} />
+          <Skip text={skipText} />
+        </Box>
         <TextLine textArray={textField1} />
         <Heading mb="6rem" ml="25rem">
           <Text fontSize="2xl">Mathematical</Text>
