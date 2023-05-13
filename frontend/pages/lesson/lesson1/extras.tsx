@@ -22,29 +22,44 @@ the interpreter won't actually tell you not to use operators on different types,
 behavior. So if you have a typo, and instead of adding 2 and 2 you add 2 and "2", you might end up with "22", or maybe
 you'll end up with 4, or maybe even a None type. It depends on the language, type, etc. On the flipside, it gives you a huge
 amount of flexibility to work with.`;
-const fieldSevenText: string = `I don't expect most students to be familiar with bit manipulation and binary math at this point. Logical
+const fieldSevenText: string = `Another fun thing is that types themselves are implemented differently in Python than many other languages,
+with the Python Data Model in Lesson 5 stating everything is an object. Each type is basically implemented no differently than
+anything you might make yourself once you start creating your own classes and objects. This is not the same in other
+languages like C, C++, even ones like Java. Certain types in these languages are 'primitive' types, meaning they are implemented in a more
+direct manner. This distinction is good to know but doesn't make sense in python where it is nonexistent.`;
+const fieldEightText: string = `I don't expect most students to be familiar with bit manipulation and binary math at this point,
+so I decided not to include bitwise operators in the Operators section. Logical
 operators are an essential to manipulate control flow, but in Python especially you will very rarely mess with bits directly, except in very
 niche cases or for fun stuff like competitive programming. They are important for sure, but I expect most people will find them
 when they need them.`;
 
-const textField1: Array<string> = [
-  fieldOneText,
-  fieldTwoText,
-  fieldThreeText,
-  fieldFourText,
-  fieldFiveText,
-  fieldSixText,
-  fieldSevenText,
-];
+const textField1: Array<string> = [fieldOneText, fieldTwoText, fieldSevenText];
+const textField2: Array<string> = [fieldThreeText, fieldFourText];
+const textField3: Array<string> = [fieldFiveText, fieldSixText, fieldSevenText];
+const textField4: Array<string> = [fieldEightText];
 
 const L1Extras = () => {
   return (
     <>
       <Stack gap={8} my="6rem" ml="2rem">
         <Heading>
-          <Text align="center">Extras</Text>
+          <Text align="center" mb="3.5rem">
+            Extras
+          </Text>
         </Heading>
         <TextLine textArray={textField1} />
+        <Heading as="h3" mb="6rem" ml="25rem">
+          <Text fontSize="2xl">Variables Revisited</Text>
+        </Heading>
+        <TextLine textArray={textField2} />
+        <Heading as="h3" mb="6rem" ml="25rem">
+          <Text fontSize="2xl">Types Revisited</Text>
+        </Heading>
+        <TextLine textArray={textField3} />
+        <Heading as="h3" mb="6rem" ml="25rem">
+          <Text fontSize="2xl">Asides</Text>
+        </Heading>
+        <TextLine textArray={textField4} />
       </Stack>
     </>
   );
