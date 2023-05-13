@@ -1,6 +1,7 @@
 import { motion, useAnimation } from "framer-motion";
 import React, { useEffect } from "react";
 import { useState } from "react";
+import { Button } from "@chakra-ui/react";
 import Sidebar from "./Sidebar";
 
 const LessonIcon = () => {
@@ -71,7 +72,7 @@ const LessonIcon = () => {
 
   return (
     <>
-      <button onClick={onClick}>
+      <Button onClick={onClick} ml="1rem" variant="unstyled">
         <svg width="24" height="24" viewBox="0 0 24 24">
           <motion.path
             {...path01Variants.closed}
@@ -86,7 +87,7 @@ const LessonIcon = () => {
             stroke="#000000"
           />
         </svg>
-      </button>
+      </Button>
 
       {isOpen && <Sidebar />}
     </>
