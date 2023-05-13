@@ -41,8 +41,8 @@ const L1Extras = () => {
   return (
     <>
       <Stack gap={8} my="6rem" ml="2rem">
-        <Heading mb="6rem" ml="25rem">
-          <Text>Extras</Text>
+        <Heading>
+          <Text align="center">Extras</Text>
         </Heading>
         <TextLine textArray={textField1} />
       </Stack>
