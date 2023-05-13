@@ -48,15 +48,16 @@ const LessonOne = () => {
   return (
     <>
       <Stack gap={8} my="6rem" ml="2rem">
-        <Heading mb="6rem" ml="25rem">
-          <Text>Lesson One</Text>
+        <Heading>
+          <Text align="center">Lesson One</Text>
         </Heading>
-        <Goal text={goalOneText} />
-
+        <Box>
+          <Goal text={goalOneText} />
+          <Skip text={skipText} />
+        </Box>
         {/* This box is essentially a dividing line */}
 
         <TextLine textArray={textField1} />
-        <Skip text={skipText} />
         <Heading mb="6rem" ml="25rem">
           <Text fontSize="2xl">This Course</Text>
         </Heading>

@@ -1,6 +1,6 @@
 import React from "react";
-import Image from 'next/image';
-import { Stack, Text, Heading } from "@chakra-ui/react";
+import Image from "next/image";
+import { Stack, Text, Heading, Box } from "@chakra-ui/react";
 import Goal from "../../../components/Goal";
 import Skip from "../../../components/Skip";
 import Python from "../../../components/Python";
@@ -61,44 +61,46 @@ const L1Setup = () => {
   return (
     <>
       <Stack gap={8} my="6rem" ml="2rem">
-        <Heading mb="6rem" ml="25rem">
-          <Text>Hello World!</Text>
+        <Heading>
+          <Text align="center">Hello World!</Text>
         </Heading>
-        <Goal text={goalOneText} />
-        <Skip text={skipText} />
+        <Box>
+          <Goal text={goalOneText} />
+          <Skip text={skipText} />
+        </Box>
         <TextLine textArray={textField1} />
         <Python trinketsrc="https://trinket.io/embed/python3/164cbfc0d8" />
         <TextLine textArray={textField2} />
         <Image
-          src='/images/python.png'
+          src="/images/python.png"
           width={500}
           height={500}
           alt="InstallPython"
         />
         <TextLine textArray={textField3} />
         <Image
-          src='/images/vscode.png'
+          src="/images/vscode.png"
           width={500}
           height={500}
           alt="InstallVSCode"
         />
         <TextLine textArray={textField4} />
         <Image
-          src='/images/terminal1.png'
+          src="/images/terminal1.png"
           width={500}
           height={500}
           alt="TerminalVersion"
         />
         <TextLine textArray={textField5} />
         <Image
-          src='/images/terminal.png'
+          src="/images/terminal.png"
           width={500}
           height={500}
           alt="TerminalCD"
         />
         <TextLine textArray={textField6} />
         <Image
-          src='/images/terminal2.png'
+          src="/images/terminal2.png"
           width={500}
           height={500}
           alt="TerminalRun"

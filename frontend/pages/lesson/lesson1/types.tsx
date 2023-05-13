@@ -13,6 +13,7 @@ import {
   Tr,
   Th,
   Td,
+  Box,
 } from "@chakra-ui/react";
 import Goal from "../../../components/Goal";
 import Skip from "../../../components/Skip";
@@ -68,11 +69,13 @@ const L1Types = () => {
   return (
     <>
       <Stack gap={8} my="6rem" ml="2rem">
-        <Heading mb="6rem" ml="25rem">
-          <Text>Types</Text>
+        <Heading>
+          <Text align="center">Types</Text>
         </Heading>
-        <Goal text={goalOneText} />
-        <Skip text={skipText} />
+        <Box>
+          <Goal text={goalOneText} />
+          <Skip text={skipText} />
+        </Box>
         <TextLine textArray={textField1} />
         <Python trinketsrc="https://trinket.io/embed/python/6296cc5f2e" />
         <TextLine textArray={textField2} />
