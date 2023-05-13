@@ -78,14 +78,15 @@ const Navbar = () => {
               <MenuList>
                 <Link href="/profile">
                   <MenuItem>
-                    <Button variant="unstyled">Profile</Button>
+                    <Text color="grey" fontWeight="bold">
+                      Profile
+                    </Text>
                   </MenuItem>
                 </Link>
-
                 <MenuItem>
-                  <Button variant="unstyled" color="#F3785D">
+                  <Text color="#F3785D" fontWeight="bold">
                     Logout
-                  </Button>
+                  </Text>
                 </MenuItem>
                 {/* <MenuItem>Login</MenuItem> */}
               </MenuList>

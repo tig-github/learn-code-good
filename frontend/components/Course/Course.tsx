@@ -1,9 +1,21 @@
 import React from "react";
 import Link from "next/link";
-import Image from 'next/image';
+import Image from "next/image";
 import { Box, Stack, Container, Text, Heading, Button } from "@chakra-ui/react";
 
-const Course = ({ route, heading, lessons, text, img }: { route: string, heading: string, lessons: string, text: string, img: string }) => {
+const Course = ({
+  route,
+  heading,
+  lessons,
+  text,
+  img,
+}: {
+  route: string;
+  heading: string;
+  lessons: string;
+  text: string;
+  img: string;
+}) => {
   return (
     <>
       <Box
@@ -20,12 +32,7 @@ const Course = ({ route, heading, lessons, text, img }: { route: string, heading
             <Text align="center">{heading}</Text>
           </Heading>
           <Text align="center">Lessons: {lessons}</Text>
-          <Image
-            src={img}
-            width={500}
-            height={500}
-            alt="Coder"
-          />
+          <Image src={img} width={500} height={500} alt="Coder" />
           <Container maxW="80%">
             <Text align="left">{text}</Text>
           </Container>
