@@ -2,7 +2,6 @@ import React from "react";
 import { Stack, Image, Text, Heading, Box } from "@chakra-ui/react";
 import Goal from "../../../components/Goal";
 import Skip from "../../../components/Skip";
-import Python from "../../../components/Python";
 import TextLine from "../../../components/TextLine";
 
 const goalOneText: string = "Learn basics about Python Syntax.";
@@ -40,19 +39,9 @@ const L1Syntax = () => {
           <Skip text={skipText} />
         </Box>
         <TextLine textArray={textField1} />
-        <Image
-          src="/images/whitespace.png"
-          width={500}
-          height={500}
-          alt="Whitespace"
-        />
+        <Image src="/images/whitespace.png" width="75%" alt="Whitespace" />
         <TextLine textArray={textField2} />
-        <Image
-          src="/images/comment.png"
-          width={500}
-          height={500}
-          alt="Comment"
-        />
+        <Image src="/images/comment.png" width="75%" alt="Comment" />
         <TextLine textArray={textField3} />
       </Stack>
     </>
