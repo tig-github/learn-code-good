@@ -133,6 +133,9 @@ const L1Types = () => {
         <TextLine textArray={textField7} />
         <Python trinketsrc="https://trinket.io/embed/python3/78e3061cf0" />
         <TextLine textArray={textField8} />
+        <Heading mb="6rem" ml="25rem">
+          <Text fontSize="2xl">Type Casting</Text>
+        </Heading>
       </Stack>
     </>
   );
