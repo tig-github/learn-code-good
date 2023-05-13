@@ -55,6 +55,11 @@ printed out. Again, these semantics will be discussed in greater detail, but bas
 out of it. If you are curious and can't wait until lesson 4, try treating print() like type(), and see what you get.`;
 const fieldFourteenText: string = `For now though, all you need to get out of this is that type() can be used to see
 the exact type of a value.`;
+const fieldFifteenText: string = `Python does allow you to change the type of one value to another in limited cases. The rule of thumb is, if it 
+makes sense to allow typecasting, Python will allow it. This has to be done directly in Python though, using a new collection of builtin functions.`;
+const fieldSixteenText: string = `These work similarly to type() in that they return a value that is useful, however in this case the value they return
+is the value passed in, changed to the proper type. For example, str(2) will return "2", and int("2") will return 2. However, something strange
+like int("Hello World!") will just give a ValueError.`;
 
 const textField1: Array<string> = [fieldOneText, fieldTwoText, fieldThreeText];
 const textField2: Array<string> = [fieldFourText];
@@ -64,6 +69,7 @@ const textField5: Array<string> = [fieldEightText];
 const textField6: Array<string> = [fieldNineText, fieldTenText];
 const textField7: Array<string> = [fieldElevenText, fieldTwelveText];
 const textField8: Array<string> = [fieldThirteenText, fieldFourteenText];
+const textField9: Array<string> = [fieldFifteenText, fieldSixteenText];
 
 const L1Types = () => {
   return (
@@ -136,6 +142,54 @@ const L1Types = () => {
         <Heading mb="6rem" ml="25rem">
           <Text fontSize="2xl">Type Casting</Text>
         </Heading>
+        <TextLine textArray={textField9} />
+        <TableContainer w="75%">
+          <Table colorScheme="blackAlpha" variant="striped">
+            <Thead>
+              <Tr>
+                <Th>Function</Th>
+                <Th>Converts To</Th>
+              </Tr>
+            </Thead>
+            <Tbody>
+              <Tr>
+                <Td>str()</Td>
+                <Td>String</Td>
+              </Tr>
+              <Tr>
+                <Td>int()</Td>
+                <Td>Integer</Td>
+              </Tr>
+              <Tr>
+                <Td>float()</Td>
+                <Td>Float</Td>
+              </Tr>
+              <Tr>
+                <Td>bool()</Td>
+                <Td>
+                  Boolean (but this is usually done implicitly unlike other
+                  typecasts)
+                </Td>
+              </Tr>
+              <Tr>
+                <Td>ord()</Td>
+                <Td>Unicode Number (see Lesson 9)</Td>
+              </Tr>
+              <Tr>
+                <Td>chr()</Td>
+                <Td>Unicode char from a unicode number (see Lesson 9)</Td>
+              </Tr>
+              <Tr>
+                <Td>hex()</Td>
+                <Td>Hexadecimal from Integer (see Lesson 9)</Td>
+              </Tr>
+            </Tbody>
+            <TableCaption>
+              Types Casting functions in Python - many more exist
+            </TableCaption>
+          </Table>
+        </TableContainer>
+        <Python trinketsrc="https://trinket.io/embed/python3/26e904f750" />
       </Stack>
     </>
   );
