@@ -1,19 +1,12 @@
 import React from "react";
 import { Stack, Box, Flex, Text, Heading } from "@chakra-ui/react";
 import CourseView from "./CourseView";
-
-type CourseObject = {
-  r: string;
-  head: string;
-  l: string;
-  t: string;
-  i: string;
-};
+import CourseViewObject from "../../utils/GlobalTypes";
 
 const StarredCourses = ({
   courseList,
 }: {
-  courseList: Array<CourseObject>;
+  courseList: Array<CourseViewObject>;
 }) => {
   return (
     <>
@@ -29,17 +22,21 @@ const StarredCourses = ({
           w="calc(100vw)"
         >
           <Flex overflowX="scroll" w="100%">
-            {courseList.map(({ r, head, l, t, i }: CourseObject) => {
-              return (
-                <CourseView
-                  route={r}
-                  heading={head}
-                  lessons={l}
-                  text={t}
-                  img={i}
-                />
-              );
-            })}
+            {courseList.map(
+              ({
+                headString,
+                lessonsString,
+                imageString,
+              }: CourseViewObject) => {
+                return (
+                  <CourseView
+                    heading={headString}
+                    lessons={lessonsString}
+                    img={imageString}
+                  />
+                );
+              }
+            )}
           </Flex>
         </Box>
       </Stack>

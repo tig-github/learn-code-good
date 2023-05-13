@@ -1,18 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import { Box, Stack, Text, Heading } from "@chakra-ui/react";
 
 const CourseView = ({
-  route,
   heading,
   lessons,
-  text,
   img,
 }: {
-  route: string;
   heading: string;
   lessons: string;
-  text: string;
   img: string;
 }) => {
   return (
