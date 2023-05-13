@@ -66,9 +66,6 @@ const Navbar = () => {
             </Link>
           </ButtonGroup>
           <Spacer />
-          <Text fontSize="2rem" color="grey">
-            Learn-Code-Good
-          </Text>
           <Menu isOpen={isHover}>
             <MenuGroup ref={hoverRef}>
               <Link
