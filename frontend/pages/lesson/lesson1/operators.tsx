@@ -9,7 +9,6 @@ import {
   TableCaption,
   Thead,
   Tbody,
-  Tfoot,
   Tr,
   Th,
   Td,

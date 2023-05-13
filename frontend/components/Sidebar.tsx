@@ -9,7 +9,7 @@ export const Routes = () => [
   { route: "/lesson/lesson1/variables", name: "Variables", header: false },
   { route: "/lesson/lesson1/types", name: "Types", header: false },
   { route: "/lesson/lesson1/operators", name: "Operators", header: false },
-  { route: "/lesson/lesson1/setup", name: "Errors", header: false },
+  { route: "/lesson/lesson1/errors", name: "Errors", header: false },
   { route: "/lesson/lesson1/inputoutput", name: "Input/Output", header: false },
   { route: "/lesson/lesson1/extras", name: "Extras", header: false },
   { route: "/lesson/lesson1/setup", name: "Lesson 2", header: true },

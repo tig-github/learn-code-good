@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack, Image, Text, Heading } from "@chakra-ui/react";
+import { Stack, Text, Heading } from "@chakra-ui/react";
 import TextLine from "../../../components/TextLine";
 
 const fieldOneText: string = `These sections are just for small notes at the end of lessons and further readings.`;
@@ -13,7 +13,7 @@ const fieldFourText: string = `However, that is more of a general way in how var
 according to the Python Data Model in Lesson 5. In Python, everything is an object, which itself is just a way to abstract data.
 The semantics of this can get pretty complicated though, and a lot of it is currently beyond me as well. Basically, you can go super
 deep even in simple concepts like variables, so it helps to draw the line very very early when first learning. `;
-const fieldFiveText: string = `Types are another area we can deep dive into. Python being dynamically typed means they acn
+const fieldFiveText: string = `Types are another area we can deep dive into. Python being dynamically typed means they can
 mostly be invisible, though Python being strongly typed means you can't just use them as you please. Other langauges will mandate
 that your variable have a certain type, and you cannot assign different types to it - among other things. There is a lot of value
 in this in terms of optimization and catching bugs.`;
@@ -33,7 +33,7 @@ operators are an essential to manipulate control flow, but in Python especially 
 niche cases or for fun stuff like competitive programming. They are important for sure, but I expect most people will find them
 when they need them.`;
 
-const textField1: Array<string> = [fieldOneText, fieldTwoText, fieldSevenText];
+const textField1: Array<string> = [fieldOneText, fieldTwoText];
 const textField2: Array<string> = [fieldThreeText, fieldFourText];
 const textField3: Array<string> = [fieldFiveText, fieldSixText, fieldSevenText];
 const textField4: Array<string> = [fieldEightText];
