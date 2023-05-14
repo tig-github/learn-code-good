@@ -15,7 +15,8 @@ interface TableProps {
 }
 
 // tableComponent style will be:
-// [{num of cols, num of rows}, {...everything else in order}, {tableCaption}]
+// [[num of cols, num of rows], [],[],..., [tableCaption]]
+// see types.tsx or operators.tsx for example usage
 
 const Tbl = ({ data }: TableProps) => {
   const numColumns = Number(data[0][0]);
