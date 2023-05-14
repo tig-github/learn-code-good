@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack, Image, Text, Heading, Box } from "@chakra-ui/react";
+import { Stack, Text, Heading, Box } from "@chakra-ui/react";
 import Goal from "../../../components/Goal";
 import Skip from "../../../components/Skip";
 import Python from "../../../components/Python";
