@@ -52,17 +52,20 @@ const _error = () => {
                 <path
                   d="M2 23.994C63.3333 9.66069 235.9 -10.406 435.5 23.994"
                   stroke="#FFC700"
-                  stroke-width="10"
+                  strokeWidth="10"
                 />
               </svg>
             </Box>
             <Box>
-              {/* <Box
+              <Box
                 bgColor="#FFC2C2"
-                w="35rem"
-                h="35rem"
-                borderRadius="0 0 0 35rem"
-              ></Box> */}
+                w="51rem"
+                h="51rem"
+                borderRadius="0 0 0 51rem"
+                ml="10rem"
+                bottom="15rem"
+                pos="absolute"
+              ></Box>
               <Text
                 transform="rotate(-45deg)"
                 fontSize="18rem"
@@ -96,7 +99,7 @@ const _error = () => {
                   borderRadius="1.5rem"
                   boxShadow="10px -5px 0px #72FF70"
                   _hover={{}}
-                  _active={{ boxShadow: "0 0 0 0" }}
+                  _active={{ boxShadow: "0 0 0 #72FF70" }}
                 >
                   <Text
                     className={inter.className}
