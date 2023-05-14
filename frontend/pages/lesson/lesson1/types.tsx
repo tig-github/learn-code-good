@@ -1,24 +1,10 @@
 import React from "react";
-import {
-  Stack,
-  Image,
-  Text,
-  Heading,
-  Table,
-  TableContainer,
-  TableCaption,
-  Thead,
-  Tbody,
-  Tfoot,
-  Tr,
-  Th,
-  Td,
-  Box,
-} from "@chakra-ui/react";
+import { Stack, Text, Heading, Box } from "@chakra-ui/react";
 import Goal from "../../../components/Goal";
 import Skip from "../../../components/Skip";
 import Python from "../../../components/Python";
 import TextLine from "../../../components/TextLine";
+import TableView from "@/components/TableView";
 
 const goalOneText: string = "Learn the basics of Types in Python";
 const skipText: string =
@@ -71,6 +57,23 @@ const textField7: Array<string> = [fieldElevenText, fieldTwelveText];
 const textField8: Array<string> = [fieldThirteenText, fieldFourteenText];
 const textField9: Array<string> = [fieldFifteenText, fieldSixteenText];
 
+const typeTable = [
+  [3, 3],
+  ["Numeric"],
+  ["Non-Numeric"],
+  ["Structured"],
+  ["Integer"],
+  ["String"],
+  ["List"],
+  ["Float"],
+  ["None"],
+  ["Set"],
+  ["Complex"],
+  ["Boolean"],
+  ["Dictionary"],
+  ["Types in Python - many more structured types than shown"],
+];
+
 const L1Types = () => {
   return (
     <>
@@ -85,37 +88,7 @@ const L1Types = () => {
         <TextLine textArray={textField1} />
         <Python trinketsrc="https://trinket.io/embed/python/6296cc5f2e" />
         <TextLine textArray={textField2} />
-        <TableContainer w="75%">
-          <Table colorScheme="blackAlpha" variant="striped">
-            <Thead>
-              <Tr>
-                <Th>Numeric</Th>
-                <Th>Non-Numeric</Th>
-                <Th>Structured</Th>
-              </Tr>
-            </Thead>
-            <Tbody>
-              <Tr>
-                <Td>Integer</Td>
-                <Td>String</Td>
-                <Td>List</Td>
-              </Tr>
-              <Tr>
-                <Td>Float</Td>
-                <Td>None</Td>
-                <Td>Set</Td>
-              </Tr>
-              <Tr>
-                <Td>Complex</Td>
-                <Td>Boolean</Td>
-                <Td>Dictionary</Td>
-              </Tr>
-            </Tbody>
-            <TableCaption>
-              Types in Python - many more structured types than shown
-            </TableCaption>
-          </Table>
-        </TableContainer>
+        <TableView tableData={typeTable} />
         <Heading mb="6rem" ml="25rem">
           <Text fontSize="2xl">Numeric Types</Text>
         </Heading>

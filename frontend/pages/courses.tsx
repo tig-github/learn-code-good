@@ -1,6 +1,6 @@
 import React from "react";
 import { Stack, Container, Text, Heading, Grid, Box } from "@chakra-ui/react";
-import Course from "../components/Course";
+import Course from "../components/Course/Course";
 
 // const courseOneText: string = `
 // This course takes you through the basics of programming. The

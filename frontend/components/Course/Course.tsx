@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import {
   Box,
   Stack,
@@ -7,7 +8,6 @@ import {
   Heading,
   Image,
   Button,
-  Link,
   Grid,
   useStyleConfig,
 } from "@chakra-ui/react";
