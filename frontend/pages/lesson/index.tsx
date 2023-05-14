@@ -4,16 +4,7 @@ import Sidebar from "../../components/Sidebar";
 import Navbar from "../../components/Navbar";
 
 const LessonLayout = () => {
-  return (
-    <>
-      <Navbar />
-      <Grid templateColumns="20% 80%" autoFlow="row">
-        <GridItem colSpan={1}>
-          <Sidebar />
-        </GridItem>
-      </Grid>
-    </>
-  );
+  return <></>;
 };
 
 export default LessonLayout;
