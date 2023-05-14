@@ -19,6 +19,7 @@ import Goal from "../../../components/Goal";
 import Skip from "../../../components/Skip";
 import Python from "../../../components/Python";
 import TextLine from "../../../components/TextLine";
+import Tbl from "@/components/tbl";
 
 const goalOneText: string = "Gain familiarity with common Python operators.";
 const skipText: string = "You have used most common Python operators before.";
@@ -84,6 +85,93 @@ const textField9: Array<string> = [
 ];
 const textField10: Array<string> = [fieldEighteenText];
 
+const operatorTable = [
+  [2, 7],
+  ["Operator"],
+  ["Name"],
+  ["+"],
+  ["Addition"],
+  ["-"],
+  ["Subtraction"],
+  ["*"],
+  ["Multiplication"],
+  ["/"],
+  ["Division"],
+  ["%"],
+  ["Modulo (division remainder)"],
+  ["**"],
+  ["Exponentiation"],
+  ["//"],
+  ["Integer Division"],
+  ["Arithmetic Operators in Python"],
+];
+
+const assignmentTable = [
+  [2, 8],
+  ["Operator"],
+  ["Name"],
+  ["="],
+  ["Assignment"],
+  ["+="],
+  ["Add to itself then assign"],
+  ["-="],
+  ["Subtract from itself then assign"],
+  ["*="],
+  ["Multiply by itself then assign"],
+  ["/="],
+  ["Divide by itself then assign"],
+  ["%="],
+  ["Modulo (division remainder) from itself then assign"],
+  ["**="],
+  ["Exponentiation to itself then assign"],
+  ["//="],
+  ["Integer division by itself then assign"],
+  ["Assignment Operators in Python"],
+];
+
+const logicTable = [
+  [2, 8],
+  ["Operator"],
+  ["Name"],
+  ["<"],
+  ["Less than"],
+  [">"],
+  ["Greater than"],
+  ["<="],
+  ["Less than or Equal to"],
+  [">="],
+  ["Greater than or Equal to"],
+  ["=="],
+  ["Equals"],
+  ["!="],
+  ["Not Equals"],
+  ["and"],
+  ["Logical And"],
+  ["or"],
+  ["Logical Or"],
+  ["Comparison and Logical Operators in Python"],
+];
+
+const booleanTable = [
+  [5, 2],
+  ["Operator"],
+  ["True op True"],
+  ["True op False"],
+  ["False op True"],
+  ["False op False"],
+  ["and"],
+  ["True"],
+  ["False"],
+  ["False"],
+  ["False"],
+  ["or"],
+  ["True"],
+  ["True"],
+  ["True"],
+  ["False"],
+  ["Boolean Algebra in Python"],
+];
+
 const L1Operators = () => {
   return (
     <>
@@ -99,47 +187,7 @@ const L1Operators = () => {
         <Heading mb="6rem" ml="25rem">
           <Text fontSize="2xl">Mathematical</Text>
         </Heading>
-        <TableContainer w="75%">
-          <Table colorScheme="blackAlpha" variant="striped">
-            <Thead>
-              <Tr>
-                <Th>Operator</Th>
-                <Th>Name</Th>
-              </Tr>
-            </Thead>
-            <Tbody>
-              <Tr>
-                <Td>+</Td>
-                <Td>Addition</Td>
-              </Tr>
-              <Tr>
-                <Td>-</Td>
-                <Td>Subtraction</Td>
-              </Tr>
-              <Tr>
-                <Td>*</Td>
-                <Td>Multiplication</Td>
-              </Tr>
-              <Tr>
-                <Td>/</Td>
-                <Td>Division</Td>
-              </Tr>
-              <Tr>
-                <Td>%</Td>
-                <Td>Modulo (division remainder)</Td>
-              </Tr>
-              <Tr>
-                <Td>**</Td>
-                <Td>Exponentiation</Td>
-              </Tr>
-              <Tr>
-                <Td>&sol;&sol;</Td>
-                <Td>Integer Division</Td>
-              </Tr>
-            </Tbody>
-            <TableCaption>Arithmetic Operators in Python</TableCaption>
-          </Table>
-        </TableContainer>
+        <Tbl data={operatorTable} />
         <TextLine textArray={textField2} />
         <Python trinketsrc="https://trinket.io/embed/python3/bab2a94f6c" />
         <TextLine textArray={textField3} />
@@ -147,136 +195,15 @@ const L1Operators = () => {
           <Text fontSize="2xl">Assignment</Text>
         </Heading>
         <TextLine textArray={textField4} />
-        <TableContainer w="75%">
-          <Table colorScheme="blackAlpha" variant="striped">
-            <Thead>
-              <Tr>
-                <Th>Operator</Th>
-                <Th>Name</Th>
-              </Tr>
-            </Thead>
-            <Tbody>
-              <Tr>
-                <Td>=</Td>
-                <Td>Assignment</Td>
-              </Tr>
-              <Tr>
-                <Td>+=</Td>
-                <Td>Add to itself then assign</Td>
-              </Tr>
-              <Tr>
-                <Td>-=</Td>
-                <Td>Subtract from itself then assign</Td>
-              </Tr>
-              <Tr>
-                <Td>*=</Td>
-                <Td>Multiply to itself then assign</Td>
-              </Tr>
-              <Tr>
-                <Td>/=</Td>
-                <Td>Division from itself then assign</Td>
-              </Tr>
-              <Tr>
-                <Td>%=</Td>
-                <Td>Modulo (division remainder) from itself then assign</Td>
-              </Tr>
-              <Tr>
-                <Td>**=</Td>
-                <Td>Exponentiation to itself then assign</Td>
-              </Tr>
-              <Tr>
-                <Td>&sol;&sol;</Td>
-                <Td>Integer Division from itself then assign</Td>
-              </Tr>
-            </Tbody>
-            <TableCaption>Assignment Operators in Python</TableCaption>
-          </Table>
-        </TableContainer>
+        <Tbl data={assignmentTable} />
         <Python trinketsrc="https://trinket.io/embed/python/4b624e0ad3" />
         <Heading mb="6rem" ml="25rem">
           <Text fontSize="2xl">Comparison and Logical</Text>
         </Heading>
         <TextLine textArray={textField5} />
-        <TableContainer w="75%">
-          <Table colorScheme="blackAlpha" variant="striped">
-            <Thead>
-              <Tr>
-                <Th>Operator</Th>
-                <Th>Name</Th>
-              </Tr>
-            </Thead>
-            <Tbody>
-              <Tr>
-                <Td>&lt; </Td>
-                <Td>Less Than</Td>
-              </Tr>
-              <Tr>
-                <Td>&gt; </Td>
-                <Td>Greater Than</Td>
-              </Tr>
-              <Tr>
-                <Td>&lt;=</Td>
-                <Td>Less Than or Equal to</Td>
-              </Tr>
-              <Tr>
-                <Td>&gt;=</Td>
-                <Td>Greater Than or Equal to</Td>
-              </Tr>
-              <Tr>
-                <Td>==</Td>
-                <Td>Equals</Td>
-              </Tr>
-              <Tr>
-                <Td>!=</Td>
-                <Td>Not Equals</Td>
-              </Tr>
-              <Tr>
-                <Td>and</Td>
-                <Td>Logical And</Td>
-              </Tr>
-              <Tr>
-                <Td>or</Td>
-                <Td>Logical Or</Td>
-              </Tr>
-            </Tbody>
-            <TableCaption>
-              Comparison and Logical Operators in Python
-            </TableCaption>
-          </Table>
-        </TableContainer>
+        <Tbl data={logicTable} />
         <TextLine textArray={textField6} />
-        <TableContainer w="75%">
-          <Table colorScheme="blackAlpha" variant="striped">
-            <Thead>
-              <Tr>
-                <Th>Operator</Th>
-                <Th>True op True</Th>
-                <Th>True op False</Th>
-                <Th>False op True</Th>
-                <Th>False op False</Th>
-              </Tr>
-            </Thead>
-            <Tbody>
-              <Tr>
-                <Td>and </Td>
-                <Td>True</Td>
-                <Td>False</Td>
-                <Td>False</Td>
-                <Td>False</Td>
-              </Tr>
-              <Tr>
-                <Td>or </Td>
-                <Td>True</Td>
-                <Td>True</Td>
-                <Td>True</Td>
-                <Td>False</Td>
-              </Tr>
-            </Tbody>
-            <TableCaption>
-              Comparison and Logical Operators in Python
-            </TableCaption>
-          </Table>
-        </TableContainer>
+        <Tbl data={booleanTable} />
         <TextLine textArray={textField7} />
         <Python trinketsrc="https://trinket.io/embed/python/347222cb14" />
         <Heading mb="6rem" ml="25rem">
