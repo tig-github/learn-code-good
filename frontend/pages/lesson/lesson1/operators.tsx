@@ -1,25 +1,10 @@
 import React from "react";
-import {
-  Stack,
-  Image,
-  Text,
-  Heading,
-  Table,
-  TableContainer,
-  TableCaption,
-  Thead,
-  Tbody,
-  Tfoot,
-  Tr,
-  Th,
-  Td,
-  Box,
-} from "@chakra-ui/react";
+import { Stack, Text, Heading, Box } from "@chakra-ui/react";
 import Goal from "../../../components/Goal";
 import Skip from "../../../components/Skip";
 import Python from "../../../components/Python";
 import TextLine from "../../../components/TextLine";
-import Tbl from "@/components/tbl";
+import TableView from "@/components/TableView";
 
 const goalOneText: string = "Gain familiarity with common Python operators.";
 const skipText: string = "You have used most common Python operators before.";
@@ -187,7 +172,7 @@ const L1Operators = () => {
         <Heading mb="6rem" ml="25rem">
           <Text fontSize="2xl">Mathematical</Text>
         </Heading>
-        <Tbl data={operatorTable} />
+        <TableView tableData={operatorTable} />
         <TextLine textArray={textField2} />
         <Python trinketsrc="https://trinket.io/embed/python3/bab2a94f6c" />
         <TextLine textArray={textField3} />
@@ -195,15 +180,15 @@ const L1Operators = () => {
           <Text fontSize="2xl">Assignment</Text>
         </Heading>
         <TextLine textArray={textField4} />
-        <Tbl data={assignmentTable} />
+        <TableView tableData={assignmentTable} />
         <Python trinketsrc="https://trinket.io/embed/python/4b624e0ad3" />
         <Heading mb="6rem" ml="25rem">
           <Text fontSize="2xl">Comparison and Logical</Text>
         </Heading>
         <TextLine textArray={textField5} />
-        <Tbl data={logicTable} />
+        <TableView tableData={logicTable} />
         <TextLine textArray={textField6} />
-        <Tbl data={booleanTable} />
+        <TableView tableData={booleanTable} />
         <TextLine textArray={textField7} />
         <Python trinketsrc="https://trinket.io/embed/python/347222cb14" />
         <Heading mb="6rem" ml="25rem">

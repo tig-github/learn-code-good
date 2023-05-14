@@ -1,25 +1,10 @@
 import React from "react";
-import {
-  Stack,
-  Image,
-  Text,
-  Heading,
-  Table,
-  TableContainer,
-  TableCaption,
-  Thead,
-  Tbody,
-  Tfoot,
-  Tr,
-  Th,
-  Td,
-  Box,
-} from "@chakra-ui/react";
+import { Stack, Text, Heading, Box } from "@chakra-ui/react";
 import Goal from "../../../components/Goal";
 import Skip from "../../../components/Skip";
 import Python from "../../../components/Python";
 import TextLine from "../../../components/TextLine";
-import Tbl from "@/components/tbl";
+import TableView from "@/components/TableView";
 
 const goalOneText: string = "Learn the basics of Types in Python";
 const skipText: string =
@@ -66,7 +51,7 @@ const textField6: Array<string> = [fieldNineText, fieldTenText];
 const textField7: Array<string> = [fieldElevenText, fieldTwelveText];
 const textField8: Array<string> = [fieldThirteenText, fieldFourteenText];
 
-const TableData = [
+const typeTable = [
   [3, 3],
   ["Numeric"],
   ["Non-Numeric"],
@@ -97,7 +82,7 @@ const L1Types = () => {
         <TextLine textArray={textField1} />
         <Python trinketsrc="https://trinket.io/embed/python/6296cc5f2e" />
         <TextLine textArray={textField2} />
-        <Tbl data={TableData} />
+        <TableView tableData={typeTable} />
         <Heading mb="6rem" ml="25rem">
           <Text fontSize="2xl">Numeric Types</Text>
         </Heading>
