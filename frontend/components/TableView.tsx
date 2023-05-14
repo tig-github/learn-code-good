@@ -10,15 +10,11 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 
-interface TableProps {
-  tableData: (string | number)[][];
-}
-
 // tableComponent style will be:
 // [[num of cols, num of rows], [],[],..., [tableCaption]]
 // see types.tsx or operators.tsx for example usage
 
-const TableView = ({ tableData }: TableProps) => {
+const TableView = ({ tableData }: { tableData: (string | number)[][] }) => {
   const numColumns = Number(tableData[0][0]);
   const numRows = Number(tableData[0][1]);
   const headers = tableData.slice(1, numColumns + 1);

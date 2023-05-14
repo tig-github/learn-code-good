@@ -1,7 +1,7 @@
-type CourseViewObject = {
+export type CourseViewObject = {
   headString: string;
   lessonsString: string;
   imageString: string;
 };
 
-export default CourseViewObject;
+export type TableType = (string | number)[][];

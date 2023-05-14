@@ -1,7 +1,7 @@
 import React from "react";
 import { Stack, Box, Flex, Text, Heading } from "@chakra-ui/react";
 import CourseView from "./CourseView";
-import CourseViewObject from "../../utils/GlobalTypes";
+import { CourseViewObject } from "../../utils/GlobalTypes";
 
 const StarredCourses = ({
   courseList,

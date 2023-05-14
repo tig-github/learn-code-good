@@ -5,6 +5,7 @@ import Skip from "../../../components/Skip";
 import Python from "../../../components/Python";
 import TextLine from "../../../components/TextLine";
 import TableView from "@/components/TableView";
+import { TableType } from "../../../utils/GlobalTypes";
 
 const goalOneText: string = "Gain familiarity with common Python operators.";
 const skipText: string = "You have used most common Python operators before.";
@@ -70,7 +71,7 @@ const textField9: Array<string> = [
 ];
 const textField10: Array<string> = [fieldEighteenText];
 
-const operatorTable = [
+const operatorTable: TableType = [
   [2, 7],
   ["Operator"],
   ["Name"],
@@ -91,7 +92,7 @@ const operatorTable = [
   ["Arithmetic Operators in Python"],
 ];
 
-const assignmentTable = [
+const assignmentTable: TableType = [
   [2, 8],
   ["Operator"],
   ["Name"],
@@ -114,7 +115,7 @@ const assignmentTable = [
   ["Assignment Operators in Python"],
 ];
 
-const logicTable = [
+const logicTable: TableType = [
   [2, 8],
   ["Operator"],
   ["Name"],
@@ -137,7 +138,7 @@ const logicTable = [
   ["Comparison and Logical Operators in Python"],
 ];
 
-const booleanTable = [
+const booleanTable: TableType = [
   [5, 2],
   ["Operator"],
   ["True op True"],

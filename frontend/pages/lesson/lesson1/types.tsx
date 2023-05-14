@@ -5,6 +5,7 @@ import Skip from "../../../components/Skip";
 import Python from "../../../components/Python";
 import TextLine from "../../../components/TextLine";
 import TableView from "@/components/TableView";
+import { TableType } from "../../../utils/GlobalTypes";
 
 const goalOneText: string = "Learn the basics of Types in Python";
 const skipText: string =
@@ -51,7 +52,7 @@ const textField6: Array<string> = [fieldNineText, fieldTenText];
 const textField7: Array<string> = [fieldElevenText, fieldTwelveText];
 const textField8: Array<string> = [fieldThirteenText, fieldFourteenText];
 
-const typeTable = [
+const typeTable: TableType = [
   [3, 3],
   ["Numeric"],
   ["Non-Numeric"],
