@@ -1,5 +1,12 @@
 import React from "react";
-import { Stack, Text, Heading } from "@chakra-ui/react";
+import {
+  Stack,
+  UnorderedList,
+  ListItem,
+  Text,
+  Link,
+  Heading,
+} from "@chakra-ui/react";
 import TextLine from "../../../components/TextLine";
 
 const fieldOneText: string = `These sections are just for small notes at the end of lessons and further readings.`;
@@ -60,6 +67,26 @@ const L1Extras = () => {
           <Text fontSize="2xl">Asides</Text>
         </Heading>
         <TextLine textArray={textField4} />
+        <Heading as="h3" mb="6rem" ml="25rem">
+          <Text fontSize="2xl">Further readings</Text>
+        </Heading>
+        <UnorderedList>
+          <ListItem ml="2rem">
+            <Link href="https://en.wikipedia.org/wiki/Type_system">
+              Type Systems - Wikipedia
+            </Link>
+          </ListItem>
+          <ListItem ml="2rem">
+            <Link href="https://www.geeksforgeeks.org/variables-under-the-hood-in-python/">
+              Variables Under The Hood - Geeks for Geeks
+            </Link>
+          </ListItem>
+          <ListItem ml="2rem">
+            <Link href="https://www.geeksforgeeks.org/python-bitwise-operators/">
+              Bitwise Operators - Geeks for Geeks
+            </Link>
+          </ListItem>
+        </UnorderedList>
       </Stack>
     </>
   );

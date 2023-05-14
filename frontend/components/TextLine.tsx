@@ -12,7 +12,7 @@ const TextLine = ({ textArray }: { textArray: any }) => {
         borderBottom="None"
         borderColor="black"
         h="100%"
-        w="80%"
+        w="90%"
         pl={4}
       >
         {textArray.map((text: string) => {
