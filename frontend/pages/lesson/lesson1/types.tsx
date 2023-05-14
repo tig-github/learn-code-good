@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack, Text, Heading, Box } from "@chakra-ui/react";
+import { Stack, Text, Heading, Button, Box } from "@chakra-ui/react";
 import Goal from "../../../components/Goal";
 import Skip from "../../../components/Skip";
 import Python from "../../../components/Python";
@@ -126,6 +126,9 @@ const L1Types = () => {
         <TableView tableData={typeTable} />
         <Python trinketsrc="https://trinket.io/embed/python3/26e904f750" />
         <Exercises exerciseArray={exerciseField} />
+        <Button w="45%" colorScheme="green">
+          Lesson Complete
+        </Button>
       </Stack>
     </>
   );

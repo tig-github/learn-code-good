@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack, Text, Heading, Box } from "@chakra-ui/react";
+import { Stack, Text, Heading, Button, Box } from "@chakra-ui/react";
 import Goal from "../../../components/Goal";
 import Skip from "../../../components/Skip";
 import TextLine from "../../../components/TextLine";
@@ -57,6 +57,9 @@ const L1InputOutput = () => {
         <TextLine textArray={textField3} />
         <Python trinketsrc="https://trinket.io/embed/python3/3bb7fb52fa" />
         <Exercises exerciseArray={exerciseField} />
+        <Button w="45%" colorScheme="green">
+          Lesson Complete
+        </Button>
       </Stack>
     </>
   );

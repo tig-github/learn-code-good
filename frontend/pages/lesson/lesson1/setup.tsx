@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack, Text, Image, Heading, Box } from "@chakra-ui/react";
+import { Stack, Text, Image, Button, Heading, Box } from "@chakra-ui/react";
 import Goal from "../../../components/Goal";
 import Skip from "../../../components/Skip";
 import Python from "../../../components/Python";
@@ -80,6 +80,9 @@ const L1Setup = () => {
         <TextLine textArray={textField6} />
         <Image src="/images/terminal2.png" w="75%" alt="TerminalRun" />
         <TextLine textArray={textField7} />
+        <Button w="45%" colorScheme="green">
+          Lesson Complete
+        </Button>
       </Stack>
     </>
   );

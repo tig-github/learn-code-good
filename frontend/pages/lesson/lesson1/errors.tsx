@@ -5,6 +5,7 @@ import {
   Text,
   Heading,
   Box,
+  Button,
   Table,
   TableContainer,
   TableCaption,
@@ -17,6 +18,8 @@ import {
 import Goal from "../../../components/Goal";
 import Skip from "../../../components/Skip";
 import TextLine from "../../../components/TextLine";
+import TableView from "@/components/TableView";
+import { TableType } from "../../../utils/GlobalTypes";
 
 const goalOneText: string = "Learn basics about Python Errors.";
 const skipText: string =
@@ -36,6 +39,26 @@ const fieldFiveText: string = `The following are some of the most common excepti
 const textField1: Array<string> = [fieldOneText, fieldTwoText, fieldThreeText];
 const textField2: Array<string> = [fieldFourText];
 const textField3: Array<string> = [fieldFiveText];
+
+const errorTable: TableType = [
+  [2, 6],
+  ["Exception"],
+  ["When it Executes"],
+  ["Syntax Errors"],
+  ["Parser (program reader) does not understand the code (usually a typo)"],
+  ["Name Error"],
+  ["Trying to use a variable that does not exist yet"],
+  ["Type Error"],
+  ["Trying to use an operator on a type that does not support it"],
+  ["IndexError"],
+  ["Indexing out of the bounds of a structured datatype (Lesson 3)"],
+  ["ValueError"],
+  [
+    `Passing a parameter into a function that does not support it
+  (e.g. pass -1 into square root)`,
+  ],
+  ["Exceptions in Python"],
+];
 
 const L1Syntax = () => {
   return (
@@ -57,49 +80,10 @@ const L1Syntax = () => {
         <Image w="75%" src="/images/exception4.PNG" />
 
         <TextLine textArray={textField3} />
-        <TableContainer w="75%">
-          <Table colorScheme="blackAlpha" variant="striped">
-            <Thead>
-              <Tr>
-                <Th>Exception</Th>
-                <Th>When it Executes</Th>
-              </Tr>
-            </Thead>
-            <Tbody>
-              <Tr>
-                <Td>Syntax Error</Td>
-                <Td>
-                  Parser (program reader) does not understand the code (usually
-                  a typo)
-                </Td>
-              </Tr>
-              <Tr>
-                <Td>Name Error</Td>
-                <Td>Trying to use a variable that does not exist yet</Td>
-              </Tr>
-              <Tr>
-                <Td>Type Error</Td>
-                <Td>
-                  Trying to use an operator on a type that does not support it
-                </Td>
-              </Tr>
-              <Tr>
-                <Td>IndexError</Td>
-                <Td>
-                  Indexing out of the bounds of a structured datatype (Lesson 3)
-                </Td>
-              </Tr>
-              <Tr>
-                <Td>ValueError</Td>
-                <Td>
-                  Passing a parameter into a function that does not support it
-                  (e.g. pass -1 into square root)
-                </Td>
-              </Tr>
-            </Tbody>
-            <TableCaption>Exceptions in Python</TableCaption>
-          </Table>
-        </TableContainer>
+        <TableView tableData={errorTable} />
+        <Button w="45%" colorScheme="green">
+          Lesson Complete
+        </Button>
       </Stack>
     </>
   );

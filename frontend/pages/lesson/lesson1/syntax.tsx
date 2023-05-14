@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack, Image, Text, Heading, Box } from "@chakra-ui/react";
+import { Stack, Image, Text, Button, Heading, Box } from "@chakra-ui/react";
 import Goal from "../../../components/Goal";
 import Skip from "../../../components/Skip";
 import TextLine from "../../../components/TextLine";
@@ -43,6 +43,9 @@ const L1Syntax = () => {
         <TextLine textArray={textField2} />
         <Image src="/images/comment.png" width="75%" alt="Comment" />
         <TextLine textArray={textField3} />
+        <Button w="45%" colorScheme="green">
+          Lesson Complete
+        </Button>
       </Stack>
     </>
   );
