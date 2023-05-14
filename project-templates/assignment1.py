@@ -37,7 +37,7 @@ except (TypeError):
 
 
 # Question 4:
-# Fix this code
+# Fix this code such that it prints the result of 1-2
 
 var1 = var2 = ''
 try:

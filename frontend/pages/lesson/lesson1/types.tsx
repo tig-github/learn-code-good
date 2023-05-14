@@ -5,6 +5,8 @@ import Skip from "../../../components/Skip";
 import Python from "../../../components/Python";
 import TextLine from "../../../components/TextLine";
 import TableView from "@/components/TableView";
+import Exercises from "@/components/Exercises";
+
 import { TableType } from "../../../utils/GlobalTypes";
 
 const goalOneText: string = "Learn the basics of Types in Python";
@@ -47,6 +49,9 @@ makes sense to allow typecasting, Python will allow it. This has to be done dire
 const fieldSixteenText: string = `These work similarly to type() in that they return a value that is useful, however in this case the value they return
 is the value passed in, changed to the proper type. For example, str(2) will return "2", and int("2") will return 2. However, something strange
 like int("Hello World!") will just give a ValueError.`;
+const exerciseOne: string = `Try casting a string with letters in it into a float. What happens? Why?`;
+const exerciseTwo: string = `Try adding a boolean with a string. What happens? Why?`;
+const exerciseThree: string = `Now, try casting the number 5.1234 into an integer, then back into a float. What happens? Why?`;
 
 const textField1: Array<string> = [fieldOneText, fieldTwoText, fieldThreeText];
 const textField2: Array<string> = [fieldFourText];
@@ -57,6 +62,7 @@ const textField6: Array<string> = [fieldNineText, fieldTenText];
 const textField7: Array<string> = [fieldElevenText, fieldTwelveText];
 const textField8: Array<string> = [fieldThirteenText, fieldFourteenText];
 const textField9: Array<string> = [fieldFifteenText, fieldSixteenText];
+const exerciseField: Array<string> = [exerciseOne, exerciseTwo, exerciseThree];
 
 const typeTable: TableType = [
   [3, 3],
@@ -117,53 +123,9 @@ const L1Types = () => {
           <Text fontSize="2xl">Type Casting</Text>
         </Heading>
         <TextLine textArray={textField9} />
-        <TableContainer w="75%">
-          <Table colorScheme="blackAlpha" variant="striped">
-            <Thead>
-              <Tr>
-                <Th>Function</Th>
-                <Th>Converts To</Th>
-              </Tr>
-            </Thead>
-            <Tbody>
-              <Tr>
-                <Td>str()</Td>
-                <Td>String</Td>
-              </Tr>
-              <Tr>
-                <Td>int()</Td>
-                <Td>Integer</Td>
-              </Tr>
-              <Tr>
-                <Td>float()</Td>
-                <Td>Float</Td>
-              </Tr>
-              <Tr>
-                <Td>bool()</Td>
-                <Td>
-                  Boolean (but this is usually done implicitly unlike other
-                  typecasts)
-                </Td>
-              </Tr>
-              <Tr>
-                <Td>ord()</Td>
-                <Td>Unicode Number (see Lesson 9)</Td>
-              </Tr>
-              <Tr>
-                <Td>chr()</Td>
-                <Td>Unicode char from a unicode number (see Lesson 9)</Td>
-              </Tr>
-              <Tr>
-                <Td>hex()</Td>
-                <Td>Hexadecimal from Integer (see Lesson 9)</Td>
-              </Tr>
-            </Tbody>
-            <TableCaption>
-              Types Casting functions in Python - many more exist
-            </TableCaption>
-          </Table>
-        </TableContainer>
+        <TableView tableData={typeTable} />
         <Python trinketsrc="https://trinket.io/embed/python3/26e904f750" />
+        <Exercises exerciseArray={exerciseField} />
       </Stack>
     </>
   );

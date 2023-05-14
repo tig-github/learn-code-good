@@ -4,6 +4,7 @@ import Goal from "../../../components/Goal";
 import Skip from "../../../components/Skip";
 import TextLine from "../../../components/TextLine";
 import Python from "../../../components/Python";
+import Exercises from "@/components/Exercises";
 
 const goalOneText: string =
   "Learn basics about Python Command Line Input and Output.";
@@ -25,10 +26,13 @@ is to seperate them by comma. print() will automatically add a space between the
 const fieldSixText: string = `You can also specify what the last line should be. Instead of printing a newline every time, you can print anything you want. This is 
 specified by the end="" keyword argument, with it printing any string. There are also special characters you can use that will
 react differently on output than others, such as \n for newline, \t for tab, or \\ to use the \ as a character.`;
+const exerciseOne: string = `Write a program that takes in a user inputted number, then prints that number plus two. HINT: Use typecasting.`;
+const exerciseTwo: string = `Write a program that prompts the user for an inputted string, prints the string, then prompts the user again - WITHOUT using print.`;
 
 const textField1: Array<string> = [fieldOneText];
 const textField2: Array<string> = [fieldTwoText, fieldThreeText];
 const textField3: Array<string> = [fieldFourText, fieldFiveText, fieldSixText];
+const exerciseField: Array<string> = [exerciseOne, exerciseTwo];
 
 const L1InputOutput = () => {
   return (
@@ -52,6 +56,7 @@ const L1InputOutput = () => {
         </Heading>
         <TextLine textArray={textField3} />
         <Python trinketsrc="https://trinket.io/embed/python3/3bb7fb52fa" />
+        <Exercises exerciseArray={exerciseField} />
       </Stack>
     </>
   );
