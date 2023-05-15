@@ -1,6 +1,5 @@
 import React from "react";
-import Image from "next/image";
-import { Stack, Text, Heading, Box } from "@chakra-ui/react";
+import { Stack, Text, Image, Button, Heading, Box } from "@chakra-ui/react";
 import Goal from "../../../components/Goal";
 import Skip from "../../../components/Skip";
 import Python from "../../../components/Python";
@@ -71,41 +70,19 @@ const L1Setup = () => {
         <TextLine textArray={textField1} />
         <Python trinketsrc="https://trinket.io/embed/python3/164cbfc0d8" />
         <TextLine textArray={textField2} />
-        <Image
-          src="/images/python.png"
-          width={500}
-          height={500}
-          alt="InstallPython"
-        />
+        <Image src="/images/python.png" w="75%" alt="InstallPython" />
         <TextLine textArray={textField3} />
-        <Image
-          src="/images/vscode.png"
-          width={500}
-          height={500}
-          alt="InstallVSCode"
-        />
+        <Image src="/images/vscode.png" w="50%" alt="InstallVSCode" />
         <TextLine textArray={textField4} />
-        <Image
-          src="/images/terminal1.png"
-          width={500}
-          height={500}
-          alt="TerminalVersion"
-        />
+        <Image src="/images/terminal1.png" w="75%" alt="TerminalVersion" />
         <TextLine textArray={textField5} />
-        <Image
-          src="/images/terminal.png"
-          width={500}
-          height={500}
-          alt="TerminalCD"
-        />
+        <Image src="/images/terminal.png" w="75%" alt="TerminalCD" />
         <TextLine textArray={textField6} />
-        <Image
-          src="/images/terminal2.png"
-          width={500}
-          height={500}
-          alt="TerminalRun"
-        />
+        <Image src="/images/terminal2.png" w="75%" alt="TerminalRun" />
         <TextLine textArray={textField7} />
+        <Button w="45%" colorScheme="green">
+          Lesson Complete
+        </Button>
       </Stack>
     </>
   );

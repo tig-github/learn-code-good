@@ -1,5 +1,12 @@
 import React from "react";
-import { Stack, Image, Text, Heading } from "@chakra-ui/react";
+import {
+  Stack,
+  UnorderedList,
+  ListItem,
+  Text,
+  Link,
+  Heading,
+} from "@chakra-ui/react";
 import TextLine from "../../../components/TextLine";
 
 const fieldOneText: string = `These sections are just for small notes at the end of lessons and further readings.`;
@@ -13,7 +20,7 @@ const fieldFourText: string = `However, that is more of a general way in how var
 according to the Python Data Model in Lesson 5. In Python, everything is an object, which itself is just a way to abstract data.
 The semantics of this can get pretty complicated though, and a lot of it is currently beyond me as well. Basically, you can go super
 deep even in simple concepts like variables, so it helps to draw the line very very early when first learning. `;
-const fieldFiveText: string = `Types are another area we can deep dive into. Python being dynamically typed means they acn
+const fieldFiveText: string = `Types are another area we can deep dive into. Python being dynamically typed means they can
 mostly be invisible, though Python being strongly typed means you can't just use them as you please. Other langauges will mandate
 that your variable have a certain type, and you cannot assign different types to it - among other things. There is a lot of value
 in this in terms of optimization and catching bugs.`;
@@ -22,29 +29,64 @@ the interpreter won't actually tell you not to use operators on different types,
 behavior. So if you have a typo, and instead of adding 2 and 2 you add 2 and "2", you might end up with "22", or maybe
 you'll end up with 4, or maybe even a None type. It depends on the language, type, etc. On the flipside, it gives you a huge
 amount of flexibility to work with.`;
-const fieldSevenText: string = `I don't expect most students to be familiar with bit manipulation and binary math at this point. Logical
+const fieldSevenText: string = `Another fun thing is that types themselves are implemented differently in Python than many other languages,
+with the Python Data Model in Lesson 5 stating everything is an object. Each type is basically implemented no differently than
+anything you might make yourself once you start creating your own classes and objects. This is not the same in other
+languages like C, C++, even ones like Java. Certain types in these languages are 'primitive' types, meaning they are implemented in a more
+direct manner. This distinction is good to know but doesn't make sense in python where it is nonexistent.`;
+const fieldEightText: string = `I don't expect most students to be familiar with bit manipulation and binary math at this point,
+so I decided not to include bitwise operators in the Operators section. Logical
 operators are an essential to manipulate control flow, but in Python especially you will very rarely mess with bits directly, except in very
 niche cases or for fun stuff like competitive programming. They are important for sure, but I expect most people will find them
 when they need them.`;
 
-const textField1: Array<string> = [
-  fieldOneText,
-  fieldTwoText,
-  fieldThreeText,
-  fieldFourText,
-  fieldFiveText,
-  fieldSixText,
-  fieldSevenText,
-];
+const textField1: Array<string> = [fieldOneText, fieldTwoText];
+const textField2: Array<string> = [fieldThreeText, fieldFourText];
+const textField3: Array<string> = [fieldFiveText, fieldSixText, fieldSevenText];
+const textField4: Array<string> = [fieldEightText];
 
 const L1Extras = () => {
   return (
     <>
       <Stack gap={8} my="6rem" ml="2rem">
         <Heading>
-          <Text align="center">Extras</Text>
+          <Text align="center" mb="3.5rem">
+            Extras
+          </Text>
         </Heading>
         <TextLine textArray={textField1} />
+        <Heading as="h3" mb="6rem" ml="25rem">
+          <Text fontSize="2xl">Variables Revisited</Text>
+        </Heading>
+        <TextLine textArray={textField2} />
+        <Heading as="h3" mb="6rem" ml="25rem">
+          <Text fontSize="2xl">Types Revisited</Text>
+        </Heading>
+        <TextLine textArray={textField3} />
+        <Heading as="h3" mb="6rem" ml="25rem">
+          <Text fontSize="2xl">Asides</Text>
+        </Heading>
+        <TextLine textArray={textField4} />
+        <Heading as="h3" mb="6rem" ml="25rem">
+          <Text fontSize="2xl">Further readings</Text>
+        </Heading>
+        <UnorderedList>
+          <ListItem ml="2rem">
+            <Link href="https://en.wikipedia.org/wiki/Type_system">
+              Type Systems - Wikipedia
+            </Link>
+          </ListItem>
+          <ListItem ml="2rem">
+            <Link href="https://www.geeksforgeeks.org/variables-under-the-hood-in-python/">
+              Variables Under The Hood - Geeks for Geeks
+            </Link>
+          </ListItem>
+          <ListItem ml="2rem">
+            <Link href="https://www.geeksforgeeks.org/python-bitwise-operators/">
+              Bitwise Operators - Geeks for Geeks
+            </Link>
+          </ListItem>
+        </UnorderedList>
       </Stack>
     </>
   );

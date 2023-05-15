@@ -1,10 +1,12 @@
 import React from "react";
-import { Stack, Text, Heading, Box } from "@chakra-ui/react";
+import { Stack, Text, Heading, Button, Box } from "@chakra-ui/react";
 import Goal from "../../../components/Goal";
 import Skip from "../../../components/Skip";
 import Python from "../../../components/Python";
 import TextLine from "../../../components/TextLine";
 import TableView from "@/components/TableView";
+import Exercises from "@/components/Exercises";
+
 import { TableType } from "../../../utils/GlobalTypes";
 
 const goalOneText: string = "Learn the basics of Types in Python";
@@ -42,6 +44,14 @@ printed out. Again, these semantics will be discussed in greater detail, but bas
 out of it. If you are curious and can't wait until lesson 4, try treating print() like type(), and see what you get.`;
 const fieldFourteenText: string = `For now though, all you need to get out of this is that type() can be used to see
 the exact type of a value.`;
+const fieldFifteenText: string = `Python does allow you to change the type of one value to another in limited cases. The rule of thumb is, if it 
+makes sense to allow typecasting, Python will allow it. This has to be done directly in Python though, using a new collection of builtin functions.`;
+const fieldSixteenText: string = `These work similarly to type() in that they return a value that is useful, however in this case the value they return
+is the value passed in, changed to the proper type. For example, str(2) will return "2", and int("2") will return 2. However, something strange
+like int("Hello World!") will just give a ValueError.`;
+const exerciseOne: string = `Try casting a string with letters in it into a float. What happens? Why?`;
+const exerciseTwo: string = `Try adding a boolean with a string. What happens? Why?`;
+const exerciseThree: string = `Now, try casting the number 5.1234 into an integer, then back into a float. What happens? Why?`;
 
 const textField1: Array<string> = [fieldOneText, fieldTwoText, fieldThreeText];
 const textField2: Array<string> = [fieldFourText];
@@ -51,6 +61,8 @@ const textField5: Array<string> = [fieldEightText];
 const textField6: Array<string> = [fieldNineText, fieldTenText];
 const textField7: Array<string> = [fieldElevenText, fieldTwelveText];
 const textField8: Array<string> = [fieldThirteenText, fieldFourteenText];
+const textField9: Array<string> = [fieldFifteenText, fieldSixteenText];
+const exerciseField: Array<string> = [exerciseOne, exerciseTwo, exerciseThree];
 
 const typeTable: TableType = [
   [3, 3],
@@ -107,6 +119,16 @@ const L1Types = () => {
         <TextLine textArray={textField7} />
         <Python trinketsrc="https://trinket.io/embed/python3/78e3061cf0" />
         <TextLine textArray={textField8} />
+        <Heading mb="6rem" ml="25rem">
+          <Text fontSize="2xl">Type Casting</Text>
+        </Heading>
+        <TextLine textArray={textField9} />
+        <TableView tableData={typeTable} />
+        <Python trinketsrc="https://trinket.io/embed/python3/26e904f750" />
+        <Exercises exerciseArray={exerciseField} />
+        <Button w="45%" colorScheme="green">
+          Lesson Complete
+        </Button>
       </Stack>
     </>
   );

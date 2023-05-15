@@ -1,10 +1,11 @@
 import React from "react";
-import { Stack, Text, Heading, Box } from "@chakra-ui/react";
+import { Stack, Text, Heading, Button, Box } from "@chakra-ui/react";
 import Goal from "../../../components/Goal";
 import Skip from "../../../components/Skip";
 import Python from "../../../components/Python";
 import TextLine from "../../../components/TextLine";
 import TableView from "@/components/TableView";
+import Exercises from "@/components/Exercises";
 import { TableType } from "../../../utils/GlobalTypes";
 
 const goalOneText: string = "Gain familiarity with common Python operators.";
@@ -34,7 +35,7 @@ const fieldTenText: string = `They work as you would expect with numbers, though
 strings, for example, they compare by placement in the alphabet.`;
 const fieldElevenText: string = `Logical operators deserve some of their own treatment. And will return True if
 both values are true, otherwise False. Or will return True when either value is True, else False. Basically
-they work as shown in this chart`;
+they work as shown in this chart. Not will flip the value - Not True is False, and Not False is True.`;
 const fieldTwelveText: string = `Another note on logical operators - when using other values, some values will
 implicitly be converted to True or False. The rule of thumb here is that empty things tend to be
 False, and non-empty things tend to be true. For example, 0 and '' are false, 2 and "hello world" are true.`;
@@ -50,6 +51,10 @@ const fieldSeventeenText: string = `You can also access the string from behind u
 -2 gives you the next to last, etc. If you go out of bounds on either direction, you get an error (and believe me, you want to get an error).`;
 const fieldEighteenText: string = `Most arithmetic operators will not work on strings, but you can use +. Concatenation is basically
 adding strings on top of each other, so "Hello " + "World!" would give you "Hello World!"`;
+const exerciseOne: string = `Concatenate multiple strings to form a sentence.`;
+const exerciseTwo: string = `Let x = 2. Make it so x becomes 30, using only assignment operators. So no standalone arithmetic operators.`;
+const exerciseThree: string = `Let x = True, y = False. Rewrite the expression "not (x or y)" without any parentheses. HINT: look up Demorgan's Law.`;
+const exerciseFour: string = `Use arithmetic operators to find out if 15 is divisible by 3. HINT: Consider %`;
 
 const textField1: Array<string> = [fieldOneText];
 const textField2: Array<string> = [fieldTwoText, fieldThreeText, fieldFourText];
@@ -70,6 +75,12 @@ const textField9: Array<string> = [
   fieldSeventeenText,
 ];
 const textField10: Array<string> = [fieldEighteenText];
+const exerciseField: Array<string> = [
+  exerciseOne,
+  exerciseTwo,
+  exerciseThree,
+  exerciseFour,
+];
 
 const operatorTable: TableType = [
   [2, 7],
@@ -135,6 +146,8 @@ const logicTable: TableType = [
   ["Logical And"],
   ["or"],
   ["Logical Or"],
+  ["not"],
+  ["Logical Negation"],
   ["Comparison and Logical Operators in Python"],
 ];
 
@@ -205,6 +218,10 @@ const L1Operators = () => {
           <Text fontSize="xl">Concatenation</Text>
         </Heading>
         <TextLine textArray={textField10} />
+        <Exercises exerciseArray={exerciseField} />
+        <Button w="45%" colorScheme="green">
+          Lesson Complete
+        </Button>
       </Stack>
     </>
   );

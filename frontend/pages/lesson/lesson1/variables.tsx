@@ -1,9 +1,10 @@
 import React from "react";
-import { Stack, Image, Text, Heading, Box } from "@chakra-ui/react";
+import { Stack, Text, Heading, Button, Box } from "@chakra-ui/react";
 import Goal from "../../../components/Goal";
 import Skip from "../../../components/Skip";
 import Python from "../../../components/Python";
 import TextLine from "../../../components/TextLine";
+import Exercises from "../../../components/Exercises";
 
 const goalOneText: string =
   "Learn basics about Python Variables and Dynamic Binding.";
@@ -28,12 +29,15 @@ changes in z will not effect y.`;
 const fieldSixText: string = `There are two major naming conventions for variables, and which to use typically depends on the 
 programming language. The first is snake_case, which is generally used in Python and is done by separating words with _. The second is 
 camelCase, which is more common in C-style languages and separates words with capital letters. Try to stick to snake_case in Python.`;
+const exerciseOne: string = `Write a program that assigns a variable to another variable, then change the original variable, then print the original varible.`;
+const exerciseTwo: string = `If I assign x = 2, then assign y = x, then assign z = y, then assign x = z, what will happen when I print x?`;
 
 const textField1: Array<string> = [fieldOneText];
 const textField2: Array<string> = [fieldTwoText, fieldThreeText];
 const textField3: Array<string> = [fieldFourText];
 const textField4: Array<string> = [fieldFiveText];
 const textField5: Array<string> = [fieldSixText];
+const exerciseField: Array<string> = [exerciseOne, exerciseTwo];
 
 const L1Variables = () => {
   return (
@@ -58,6 +62,10 @@ const L1Variables = () => {
         </Heading>
         <TextLine textArray={textField5} />
         <Python trinketsrc="https://trinket.io/embed/python/bb483ce246" />
+        <Exercises exerciseArray={exerciseField} />
+        <Button w="45%" colorScheme="green">
+          Lesson Complete
+        </Button>
       </Stack>
     </>
   );
