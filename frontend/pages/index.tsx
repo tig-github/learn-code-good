@@ -1,6 +1,7 @@
 import React from "react";
-import { Stack, Container, Text, Heading } from "@chakra-ui/react";
+import { Grid } from "@chakra-ui/react";
 import Python from "../components/Python";
+import Background from "@/components/Landing/Background";
 
 const welcomeText: string = `Welcome to this website.
 My goal with this website is to help teach people how to code in as simple of an environment as possible. 
@@ -16,20 +17,9 @@ I would like to embed it directly.`;
 
 const Home = () => {
   return (
-    <>
-      <Stack gap={12} my="6rem" align="center">
-        <Heading mb="3rem">
-          <Text align="center">print(`Hello World`)</Text>
-        </Heading>
-        <Container maxW="75%">
-          <Text>{welcomeText}</Text>
-        </Container>
-        <Container maxW="75%">
-          <Text>{welcomeText2}</Text>
-        </Container>
-        <Python trinketsrc="https://trinket.io/embed/python3/164cbfc0d8" />
-      </Stack>
-    </>
+    <Grid>
+      <Background />
+    </Grid>
   );
 };
 
