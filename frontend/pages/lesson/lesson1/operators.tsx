@@ -53,7 +53,7 @@ const fieldEighteenText: string = `Most arithmetic operators will not work on st
 adding strings on top of each other, so "Hello " + "World!" would give you "Hello World!"`;
 const exerciseOne: string = `Concatenate multiple strings to form a sentence.`;
 const exerciseTwo: string = `Let x = 2. Make it so x becomes 30, using only assignment operators. So no standalone arithmetic operators.`;
-const exerciseThree: string = `Let x = True, y = False. Rewrite the expression "not (x or y)" without any parentheses. HINT: look up Demorgan's Law.`;
+const exerciseThree: string = `Let x = True, y = False. Rewrite the expression "not (x or y)" without any parentheses. HINT: look up De Morgan's Law.`;
 const exerciseFour: string = `Use arithmetic operators to find out if 15 is divisible by 3. HINT: Consider %`;
 
 const textField1: Array<string> = [fieldOneText];

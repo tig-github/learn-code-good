@@ -12,7 +12,7 @@ const StarredCourses = ({
     <>
       <Stack align="center" gap={6}>
         <Heading as="h3" size="lg">
-          <Text>Starred Coureses</Text>
+          <Text>Starred Courses</Text>
         </Heading>
         <Box
           borderWidth=".05rem"
