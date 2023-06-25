@@ -5,7 +5,7 @@ import Link from "next/link";
 export const Routes = () => [
   { route: "/lesson/lesson1", name: "Lesson 1", header: true },
   { route: "/lesson/lesson1/setup", name: "Hello World! Setup", header: false },
-  { route: "/lesson/lesson1/syntax", name: "Syntax", header: false },
+  { route: "/lesson/lesson1/syntax", name: "Basics", header: false },
   { route: "/lesson/lesson1/variables", name: "Variables", header: false },
   { route: "/lesson/lesson1/types", name: "Types", header: false },
   { route: "/lesson/lesson1/operators", name: "Operators", header: false },
