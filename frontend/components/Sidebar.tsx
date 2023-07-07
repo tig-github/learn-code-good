@@ -12,7 +12,7 @@ export const Routes = () => [
   { route: "/lesson/lesson1/errors", name: "Errors", header: false },
   { route: "/lesson/lesson1/inputoutput", name: "Input/Output", header: false },
   { route: "/lesson/lesson1/extras", name: "Extras", header: false },
-  { route: "/lesson/lesson1/setup", name: "Lesson 2", header: true },
+  { route: "/lesson/lesson2", name: "Lesson 2", header: true },
   { route: "/lesson/lesson1/setup", name: "Control Flow", header: false },
   { route: "/lesson/lesson1/setup", name: "Branching", header: false },
   { route: "/lesson/lesson1/setup", name: "While Loops", header: false },
