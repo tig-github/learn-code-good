@@ -18,7 +18,7 @@ const Courses = () => {
   return (
     <>
       <Heading mt="2rem">
-        <Text align="center">print('Courses')</Text>
+        <Text align="center">print(&apos;Courses&apos;)</Text>
       </Heading>
 
       <Box p="4rem">

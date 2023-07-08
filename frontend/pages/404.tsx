@@ -16,7 +16,7 @@ const JetBrainsMono = localFont({
   src: "../public/JetBrainsMono-ExtraBold.ttf",
 });
 
-const _error = () => {
+export default function Custom404() {
   return (
     <>
       <Box bgColor="#EDEDED" h="45rem" overflow="hidden">
@@ -116,6 +116,4 @@ const _error = () => {
       </Box>
     </>
   );
-};
-
-export default _error;
+}

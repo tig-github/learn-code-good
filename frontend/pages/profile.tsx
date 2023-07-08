@@ -1,7 +1,7 @@
 import React from "react";
 import { Stack, Text, Heading } from "@chakra-ui/react";
 import StarredCourses from "../components/Course/StarredCourses";
-import CourseViewObject from "../utils/GlobalTypes";
+import { CourseViewObject } from "../utils/GlobalTypes";
 
 const Profile = () => {
   const user = "Default Username";

@@ -72,12 +72,12 @@ const L1Syntax = () => {
           <Skip text={skipText} />
         </Box>
         <TextLine textArray={textField1} />
-        <Image w="75%" src="/images/exception1.PNG" />
-        <Image w="75%" src="/images/exception2.PNG" />
+        <Image w="75%" src="/images/exception1.PNG" alt="exception1" />
+        <Image w="75%" src="/images/exception2.PNG" alt="exception2" />
 
         <TextLine textArray={textField2} />
-        <Image w="75%" src="/images/exception3.PNG" />
-        <Image w="75%" src="/images/exception4.PNG" />
+        <Image w="75%" src="/images/exception3.PNG" alt="exception3" />
+        <Image w="75%" src="/images/exception4.PNG" alt="exception4" />
 
         <TextLine textArray={textField3} />
         <TableView tableData={errorTable} />
